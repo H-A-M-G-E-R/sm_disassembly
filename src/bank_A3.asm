@@ -13281,7 +13281,7 @@ EnemyShot_Metroid:
     LDA.W #$0190                                                         ;A3F027;
     STA.W Enemy.freezeTimer,X                                            ;A3F02A;
     LDA.W Enemy.AI,X                                                     ;A3F02D;
-    ORA.W #$0004                                                         ;A3F030;
+    ORA.W #E_AI_FROZEN                                                   ;A3F030;
     STA.W Enemy.AI,X                                                     ;A3F033;
     RTL                                                                  ;A3F036;
 

@@ -15504,7 +15504,7 @@ Execute_Room_Main_ASM:
 MainASM_CrocomiresRoomShaking:
 ; Room $A98D. Crocomire's room
     LDA.W Enemy.properties                                               ;8FE8CD;
-    BIT.W #$0200                                                         ;8FE8D0;
+    BIT.W #EPROP_DELETE                                                  ;8FE8D0;
     BNE .return                                                          ;8FE8D3;
     LDA.W Enemy.var0                                                     ;8FE8D5;
     CMP.W #$0040                                                         ;8FE8D8;

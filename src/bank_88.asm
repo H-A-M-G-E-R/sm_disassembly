@@ -10362,7 +10362,7 @@ PreInstruction_DraygonMainScreenLayers:
 ;; Parameters:
 ;;     X: HDMA object index
     LDA.W Enemy.properties                                               ;88DF94;
-    BIT.W #$0200                                                         ;88DF97;
+    BIT.W #EPROP_DELETE                                                  ;88DF97;
     BNE .offScreen                                                       ;88DF9A;
     LDA.W Enemy.XPosition                                                ;88DF9C;
     SEC                                                                  ;88DF9F;

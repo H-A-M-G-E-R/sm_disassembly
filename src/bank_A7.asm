@@ -9985,7 +9985,7 @@ EnemyShot_Phantoon:
 
   .alive:
     LDA.W Enemy.AI,X                                                     ;A7DDD4;
-    BIT.W #$0002                                                         ;A7DDD7;
+    BIT.W #E_AI_HURT                                                     ;A7DDD7;
     BEQ .returnUpper                                                     ;A7DDDA;
     LDA.W #$0073                                                         ;A7DDDC;
     JSL.L QueueSound_Lib2_Max6                                           ;A7DDDF;

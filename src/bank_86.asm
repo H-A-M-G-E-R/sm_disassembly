@@ -17486,7 +17486,7 @@ InitAI_EnemyProjectile_EnemyDeathExplosion:
     LDA.W EnemyIndex                                                     ;86EF9B;
     STA.L EnemyProjectileData_KilledEnemyIndex,X                         ;86EF9E;
     LDA.W Enemy.properties,Y                                             ;86EFA2;
-    BIT.W #$4000                                                         ;86EFA5;
+    BIT.W #EPROP_RESPAWN                                                 ;86EFA5;
     BEQ .noRespawn                                                       ;86EFA8;
     LDA.W EnemyIndex                                                     ;86EFAA;
     ORA.W #$8000                                                         ;86EFAD;

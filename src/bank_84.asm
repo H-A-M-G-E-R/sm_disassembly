@@ -1611,7 +1611,7 @@ UNUSED_Instruction_PLM_WaitUntil_Enemy0_IsDead_848A40:
 ;; Parameters:
 ;;     X: PLM index
     LDA.W Enemy.properties                                               ;848A40;
-    AND.W #$0200                                                         ;848A43;
+    AND.W #EPROP_DELETE                                                  ;848A43;
     BNE .return                                                          ;848A46;
     LDA.W Enemy.ID                                                       ;848A48;
     CMP.W #EnemyHeaders_Respawn                                          ;848A4B;
@@ -1629,7 +1629,7 @@ UNUSED_Instruction_PLM_WaitUntil_Enemy0_IsDead_848A59:
 ;; Parameters:
 ;;     X: PLM index
     LDA.W Enemy[1].properties                                            ;848A59;
-    AND.W #$0200                                                         ;848A5C;
+    AND.W #EPROP_DELETE                                                  ;848A5C;
     BNE .return                                                          ;848A5F;
     LDA.W Enemy[1].ID                                                    ;848A61;
     CMP.W #EnemyHeaders_Respawn                                          ;848A64;

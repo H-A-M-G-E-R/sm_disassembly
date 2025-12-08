@@ -171,7 +171,7 @@ RTS_A2807B:
 ;;; $807C: Instruction - delete enemy ;;;
 Instruction_CommonA2_DeleteEnemy:
     LDA.W Enemy.properties,X                                             ;A2807C;
-    ORA.W #$0200                                                         ;A2807F;
+    ORA.W #EPROP_DELETE                                                  ;A2807F;
     STA.W Enemy.properties,X                                             ;A28082;
     PLA                                                                  ;A28085;
     PEA.W  ProcessEnemyInstructions_return-1                             ;A28086;
@@ -384,7 +384,7 @@ Instruction_CommonA2_TransferYBytesInYToVRAM:
 ;;; $8173: Instruction - enable off-screen processing ;;;
 Instruction_CommonA2_EnableOffScreenProcessing:
     LDA.W Enemy.properties,X                                             ;A28173;
-    ORA.W #$0800                                                         ;A28176;
+    ORA.W #EPROP_PROCESS_OFFSCREEN                                       ;A28176;
     STA.W Enemy.properties,X                                             ;A28179;
     RTL                                                                  ;A2817C;
 
@@ -392,7 +392,7 @@ Instruction_CommonA2_EnableOffScreenProcessing:
 ;;; $817D: Instruction - disable off-screen processing ;;;
 Instruction_CommonA2_DisableOffScreenProcessing:
     LDA.W Enemy.properties,X                                             ;A2817D;
-    AND.W #$F7FF                                                         ;A28180;
+    AND.W #~EPROP_PROCESS_OFFSCREEN                                      ;A28180;
     STA.W Enemy.properties,X                                             ;A28183;
     RTL                                                                  ;A28186;
 

@@ -3874,7 +3874,7 @@ PowerBombReaction_Crocomire:
     ADC.W #$0004                                                         ;A4B9BD;
     STA.W Enemy.flashTimer                                               ;A4B9C0;
     LDA.W Enemy.AI                                                       ;A4B9C3;
-    ORA.W #$0002                                                         ;A4B9C6;
+    ORA.W #E_AI_HURT                                                     ;A4B9C6;
     STA.W Enemy.AI                                                       ;A4B9C9;
     LDA.W #$0018                                                         ;A4B9CC;
     STA.W Crocomire.fightFunctionIndex                                   ;A4B9CF;
@@ -3989,7 +3989,7 @@ EnemyShot_Crocomire_OpenMouth:
     ADC.W #$000E                                                         ;A4BAA4;
     STA.W Enemy.flashTimer                                               ;A4BAA7;
     LDA.W Enemy.AI                                                       ;A4BAAA;
-    ORA.W #$0002                                                         ;A4BAAD;
+    ORA.W #E_AI_HURT                                                     ;A4BAAD;
     STA.W Enemy.AI                                                       ;A4BAB0;
     RTL                                                                  ;A4BAB3;
 

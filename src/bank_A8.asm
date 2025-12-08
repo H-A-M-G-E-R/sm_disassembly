@@ -1183,13 +1183,13 @@ ContactReaction_Evir_Common:
     BEQ .return                                                          ;A88B33;
     STA.W Enemy[1].freezeTimer,X                                         ;A88B35;
     LDA.W Enemy[1].AI,X                                                  ;A88B38;
-    ORA.W #$0004                                                         ;A88B3B;
+    ORA.W #E_AI_FROZEN                                                   ;A88B3B;
     STA.W Enemy[1].AI,X                                                  ;A88B3E;
     LDA.W Enemy[2].var2,X                                                ;A88B41;
     CMP.W #Function_EvirProjectile_Moving                                ;A88B44;
     BEQ .return                                                          ;A88B47;
     LDA.W Enemy[2].AI,X                                                  ;A88B49;
-    ORA.W #$0004                                                         ;A88B4C;
+    ORA.W #E_AI_FROZEN                                                   ;A88B4C;
     STA.W Enemy[2].AI,X                                                  ;A88B4F;
     LDA.W Enemy.freezeTimer,X                                            ;A88B52;
     STA.W Enemy[2].freezeTimer,X                                         ;A88B55;
@@ -5800,10 +5800,10 @@ ContactReaction_Magdollite_Common:
     STA.W Enemy[1].freezeTimer,X                                         ;A8B42F;
     STA.W Enemy[2].freezeTimer,X                                         ;A8B432;
     LDA.W Enemy[1].AI,X                                                  ;A8B435;
-    ORA.W #$0004                                                         ;A8B438;
+    ORA.W #E_AI_FROZEN                                                   ;A8B438;
     STA.W Enemy[1].AI,X                                                  ;A8B43B;
     LDA.W Enemy[2].AI,X                                                  ;A8B43E;
-    ORA.W #$0004                                                         ;A8B441;
+    ORA.W #E_AI_FROZEN                                                   ;A8B441;
     STA.W Enemy[2].AI,X                                                  ;A8B444;
 
   .return:
@@ -7554,7 +7554,7 @@ Function_Powamp_Inflating:
 ;;; $C2CF: Powamp function - body - inflated - rise to target height ;;;
 Function_Powamp_Inflated_RiseToTargetHeight:
     LDA.W Enemy.AI,X                                                     ;A8C2CF;
-    BIT.W #$0001                                                         ;A8C2D2;
+    BIT.W #E_AI_GRAPPLE                                                  ;A8C2D2;
     BEQ .notGrappleAI                                                    ;A8C2D5;
     LDA.W #Function_Powamp_Grappled_RiseToTargetHeight                   ;A8C2D7;
     STA.W Powamp.function,X                                              ;A8C2DA;
@@ -7692,7 +7692,7 @@ Function_Powamp_Inflated_FinishWiggle:
 ;;; $C3E1: Powamp function - body - grappled - rise to target height ;;;
 Function_Powamp_Grappled_RiseToTargetHeight:
     LDA.W Enemy.AI,X                                                     ;A8C3E1;
-    BIT.W #$0001                                                         ;A8C3E4;
+    BIT.W #E_AI_GRAPPLE                                                  ;A8C3E4;
     BNE .grappleAI                                                       ;A8C3E7;
     LDA.W #Function_Powamp_Inflated_FinishWiggle                         ;A8C3E9;
     STA.W Powamp.function,X                                              ;A8C3EC;
@@ -7764,7 +7764,7 @@ Function_Powamp_Grappled_RiseToTargetHeight:
 ;;; $C469: Powamp function - body - grappled - finish wiggle ;;;
 Function_Powamp_Grappled_FinishWiggle:
     LDA.W Enemy.AI,X                                                     ;A8C469;
-    BIT.W #$0001                                                         ;A8C46C;
+    BIT.W #E_AI_GRAPPLE                                                  ;A8C46C;
     BNE .GrappleAI                                                       ;A8C46F;
     LDA.W #Function_Powamp_Inflated_FinishWiggle                         ;A8C471;
     STA.W Powamp.function,X                                              ;A8C474;
@@ -7826,7 +7826,7 @@ Function_Powamp_Grappled_FinishWiggle:
 ;;; $C4DC: Powamp function - body - grappled - resting ;;;
 Function_Powamp_Grappled_Resting:
     LDA.W Enemy.AI,X                                                     ;A8C4DC;
-    BIT.W #$0001                                                         ;A8C4DF;
+    BIT.W #E_AI_GRAPPLE                                                  ;A8C4DF;
     BNE .done                                                            ;A8C4E2;
     LDA.W #Function_Powamp_Deflating                                     ;A8C4E4;
     STA.W Powamp.function,X                                              ;A8C4E7;
@@ -7990,22 +7990,22 @@ EnemyShot_Powamp:
   .body:
     JSL.L NormalEnemyShotAI_NoDeathCheck_NoEnemyShotGraphic_External     ;A8C5FA;
     LDA.W Enemy.AI,X                                                     ;A8C5FE;
-    BIT.W #$0004                                                         ;A8C601;
+    BIT.W #E_AI_FROZEN                                                   ;A8C601;
     BEQ .notFrozenAI                                                     ;A8C604;
     LDA.W Enemy.freezeTimer,X                                            ;A8C606;
     STA.W Enemy[-1].freezeTimer,X                                        ;A8C609;
     LDA.W Enemy[-1].AI,X                                                 ;A8C60C;
-    ORA.W #$0004                                                         ;A8C60F;
+    ORA.W #E_AI_FROZEN                                                   ;A8C60F;
     STA.W Enemy[-1].AI,X                                                 ;A8C612;
 
   .notFrozenAI:
     LDA.W Enemy.AI,X                                                     ;A8C615;
-    BIT.W #$0002                                                         ;A8C618;
+    BIT.W #E_AI_HURT                                                     ;A8C618;
     BEQ .notHurtAI                                                       ;A8C61B;
     LDA.W Enemy.flashTimer,X                                             ;A8C61D;
     STA.W Enemy[-1].flashTimer,X                                         ;A8C620;
     LDA.W Enemy[-1].AI,X                                                 ;A8C623;
-    ORA.W #$0002                                                         ;A8C626;
+    ORA.W #E_AI_HURT                                                     ;A8C626;
     STA.W Enemy[-1].AI,X                                                 ;A8C629;
 
   .notHurtAI:

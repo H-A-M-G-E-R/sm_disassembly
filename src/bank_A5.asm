@@ -1623,7 +1623,7 @@ Function_DraygonBody_GrabbedSamus_MovingToTargetPosition:
     STA.W Enemy.flashTimer                                               ;A58F35;
     PLX                                                                  ;A58F38;
     LDA.W Enemy.AI                                                       ;A58F39;
-    ORA.W #$0002                                                         ;A58F3C;
+    ORA.W #E_AI_HURT                                                     ;A58F3C;
     STA.W Enemy.AI                                                       ;A58F3F;
     RTS                                                                  ;A58F42;
 
@@ -1707,7 +1707,7 @@ Function_DraygonBody_GrabbedSamus_RisingSpiralMovement:
     STA.W Enemy.flashTimer                                               ;A58FED;
     PLX                                                                  ;A58FF0;
     LDA.W Enemy.AI                                                       ;A58FF1;
-    ORA.W #$0002                                                         ;A58FF4;
+    ORA.W #E_AI_HURT                                                     ;A58FF4;
     STA.W Enemy.AI                                                       ;A58FF7;
     RTS                                                                  ;A58FFA;
 

@@ -215,7 +215,7 @@ RTS_A0807B:
 ;;; $807C: Instruction - delete enemy ;;;
 Instruction_Common_DeleteEnemy:
     LDA.W Enemy.properties,X                                             ;A0807C;
-    ORA.W #$0200                                                         ;A0807F;
+    ORA.W #EPROP_DELETE                                                  ;A0807F;
     STA.W Enemy.properties,X                                             ;A08082;
     PLA                                                                  ;A08085;
     PEA.W ProcessEnemyInstructions_return-1                              ;A08086;
@@ -428,7 +428,7 @@ Instruction_Common_TransferYBytesInYToVRAM:
 ;;; $8173: Instruction - enable off-screen processing ;;;
 Instruction_Common_EnableOffScreenProcessing:
     LDA.W Enemy.properties,X                                             ;A08173;
-    ORA.W #$0800                                                         ;A08176;
+    ORA.W #EPROP_PROCESS_OFFSCREEN                                       ;A08176;
     STA.W Enemy.properties,X                                             ;A08179;
     RTL                                                                  ;A0817C;
 
@@ -436,7 +436,7 @@ Instruction_Common_EnableOffScreenProcessing:
 ;;; $817D: Instruction - disable off-screen processing ;;;
 Instruction_Common_DisableOffScreenProcessing:
     LDA.W Enemy.properties,X                                             ;A0817D;
-    AND.W #$F7FF                                                         ;A08180;
+    AND.W #~EPROP_PROCESS_OFFSCREEN                                      ;A08180;
     STA.W Enemy.properties,X                                             ;A08183;
     RTL                                                                  ;A08186;
 
@@ -1173,13 +1173,13 @@ Initialise_Enemies:
     LDA.W #$0000                                                         ;A08B93;
     STA.W Enemy.spritemap,Y                                              ;A08B96;
     LDA.W Enemy.properties,Y                                             ;A08B99;
-    BIT.W #$2000                                                         ;A08B9C;
+    BIT.W #EPROP_PROCESS_INSTRUCTIONS                                    ;A08B9C;
     BEQ .noInstructions                                                  ;A08B9F;
     PHX                                                                  ;A08BA1;
     PHY                                                                  ;A08BA2;
     LDX.W #Spritemap_Common_Nothing                                      ;A08BA3;
     LDA.W Enemy.properties2,Y                                            ;A08BA6;
-    BIT.W #$0004                                                         ;A08BA9;
+    BIT.W #EPROP2_EXTENDED_SPRITEMAP                                     ;A08BA9;
     BEQ +                                                                ;A08BAC;
     LDX.W #ExtendedSpritemap_Common_Nothing                              ;A08BAE;
 
@@ -1622,7 +1622,7 @@ Determine_Which_Enemies_to_Process:
     CMP.W #EnemyHeaders_Respawn                                          ;A08EE0;
     BEQ .next                                                            ;A08EE3;
     LDA.W Enemy.properties,X                                             ;A08EE5;
-    BIT.W #$0200                                                         ;A08EE8;
+    BIT.W #EPROP_DELETE                                                  ;A08EE8;
     BEQ ..notDeleted                                                     ;A08EEB;
     STZ.W Enemy.ID,X                                                     ;A08EED;
     JMP.W .next                                                          ;A08EF0;
@@ -1631,7 +1631,7 @@ Determine_Which_Enemies_to_Process:
     BIT.W #$0800                                                         ;A08EF3;
     BNE .activeEnemies                                                   ;A08EF6;
     LDA.W Enemy.AI,X                                                     ;A08EF8;
-    BIT.W #$0004                                                         ;A08EFB;
+    BIT.W #E_AI_FROZEN                                                   ;A08EFB;
     BNE .activeEnemies                                                   ;A08EFE;
     LDA.W Enemy.XPosition,X                                              ;A08F00;
     CLC                                                                  ;A08F03;
@@ -1664,7 +1664,7 @@ Determine_Which_Enemies_to_Process:
     INY                                                                  ;A08F3C;
     STY.W ActiveEnemyIndicesStackPointer                                 ;A08F3D;
     LDA.W Enemy.properties,X                                             ;A08F40;
-    BIT.W #$0400                                                         ;A08F43;
+    BIT.W #EPROP_INTANGIBLE                                              ;A08F43;
     BNE .next                                                            ;A08F46;
     TXA                                                                  ;A08F48;
     LDY.W InteractiveEnemyIndicesStackPointer                            ;A08F49;
@@ -1698,7 +1698,7 @@ Determine_Which_Enemies_to_Process:
     CMP.W #EnemyHeaders_Respawn                                          ;A08F7F;
     BEQ .nextProcessOffscreen                                            ;A08F82;
     LDA.W Enemy.properties,X                                             ;A08F84;
-    BIT.W #$0200                                                         ;A08F87;
+    BIT.W #EPROP_DELETE                                                  ;A08F87;
     BEQ ..notDeleted                                                     ;A08F8A;
     STZ.W Enemy.ID,X                                                     ;A08F8C;
     BRA .nextProcessOffscreen                                            ;A08F8F;
@@ -1712,7 +1712,7 @@ Determine_Which_Enemies_to_Process:
     INY                                                                  ;A08F9C;
     STY.W ActiveEnemyIndicesStackPointer                                 ;A08F9D;
     LDA.W Enemy.properties,X                                             ;A08FA0;
-    BIT.W #$0400                                                         ;A08FA3;
+    BIT.W #EPROP_INTANGIBLE                                              ;A08FA3;
     BNE .nextProcessOffscreen                                            ;A08FA6;
     TXA                                                                  ;A08FA8;
     LDY.W InteractiveEnemyIndicesStackPointer                            ;A08FA9;
@@ -1852,7 +1852,7 @@ Main_Enemy_Routine:
     LDA.W Enemy.bank,X                                                   ;A09018;
     STA.W EnemyAIPointer+2                                               ;A0901B;
     LDA.W Enemy.properties,X                                             ;A0901E;
-    BIT.W #$0400                                                         ;A09021;
+    BIT.W #EPROP_INTANGIBLE                                              ;A09021;
     BNE .interactEnd                                                     ;A09024;
     LDA.W Enemy.invincibilityTimer,X                                     ;A09026;
     BEQ .notInvincible                                                   ;A09029;
@@ -1876,7 +1876,7 @@ endif
   .checkParalyzed:
     LDX.W EnemyIndex                                                     ;A0904C;
     LDA.W Enemy.properties2,X                                            ;A0904F;
-    BIT.W #$0001                                                         ;A09052;
+    BIT.W #EPROP2_PARALYZED                                              ;A09052;
     BNE .processAIEnd                                                    ;A09055;
 
   .interactEnd:
@@ -1935,7 +1935,7 @@ endif
     LDX.W EnemyIndex                                                     ;A090AE;
     INC.W Enemy.frameCounter,X                                           ;A090B1;
     LDA.W Enemy.properties,X                                             ;A090B4;
-    BIT.W #$2000                                                         ;A090B7;
+    BIT.W #EPROP_PROCESS_INSTRUCTIONS                                    ;A090B7;
     BEQ .processAIEnd                                                    ;A090BA;
     LDA.W #$0002                                                         ;A090BC;
     STA.L EnemyProcessingStage                                           ;A090BF;
@@ -1944,7 +1944,7 @@ endif
   .processAIEnd:
     LDX.W EnemyIndex                                                     ;A090C6;
     LDA.W Enemy.properties2,X                                            ;A090C9;
-    BIT.W #$0001                                                         ;A090CC;
+    BIT.W #EPROP2_PARALYZED                                              ;A090CC;
     BEQ .paralysedEnd                                                    ;A090CF;
     LDA.W Enemy.flashTimer,X                                             ;A090D1;
     CMP.W #$0001                                                         ;A090D4;
@@ -1961,7 +1961,7 @@ endif
   .paralysedEnd:
     LDX.W EnemyIndex                                                     ;A090EF;
     LDA.W Enemy.properties2,X                                            ;A090F2;
-    BIT.W #$0004                                                         ;A090F5;
+    BIT.W #EPROP2_EXTENDED_SPRITEMAP                                     ;A090F5;
     BNE +                                                                ;A090F8;
     JSL.L CheckIfEnemyIsOnScreen                                         ;A090FA;
     BEQ +                                                                ;A090FE;
@@ -1969,7 +1969,7 @@ endif
 
 +   LDX.W EnemyIndex                                                     ;A09102;
     LDA.W Enemy.properties,X                                             ;A09105;
-    BIT.W #$0300                                                         ;A09108;
+    BIT.W #EPROP_DELETE|EPROP_INVISIBLE                                  ;A09108;
     BNE .drawEnemyEnd                                                    ;A0910B;
     LDA.W DisableDrawingOfEnemies                                        ;A0910D;
     BIT.W #$0001                                                         ;A09110;
@@ -1990,7 +1990,7 @@ endif
     CMP.W #$0008                                                         ;A0912E;
     BPL +                                                                ;A09131;
     LDA.W Enemy.AI,X                                                     ;A09133;
-    AND.W #$FFFD                                                         ;A09136;
+    AND.W #~E_AI_HURT                                                    ;A09136;
     STA.W Enemy.AI,X                                                     ;A09139;
 
 +   INC.W ActiveEnemyIndicesIndex                                        ;A0913C;
@@ -2333,7 +2333,7 @@ SpawnEnemy_AlwaysSucceed:
     PLY                                                                  ;A093CF;
     PLX                                                                  ;A093D0;
     LDA.W Enemy.properties,Y                                             ;A093D1;
-    BIT.W #$2000                                                         ;A093D4;
+    BIT.W #EPROP_PROCESS_INSTRUCTIONS                                    ;A093D4;
     BEQ .nextEnemy                                                       ;A093D7;
     LDA.W #Spritemap_Common_Nothing                                      ;A093D9;
     STA.W Enemy.spritemap,Y                                              ;A093DC;
@@ -2466,7 +2466,7 @@ WriteEnemyOAM_IfNotFrozenOrInvincibleFrame:
     LDA.W Enemy.GFXOffset,X                                              ;A094C2;
     STA.B DP_Temp00                                                      ;A094C5;
     LDA.W Enemy.properties2,X                                            ;A094C7;
-    BIT.W #$0004                                                         ;A094CA;
+    BIT.W #EPROP2_EXTENDED_SPRITEMAP                                     ;A094CA;
     BNE .extendedSpritemap                                               ;A094CD;
     LDA.W Enemy.ID,X                                                     ;A094CF;
     STA.L neverReadF37E                                                  ;A094D2;
@@ -2511,7 +2511,7 @@ WriteEnemyOAM_IfNotFrozenOrInvincibleFrame:
     STA.B DP_Temp12                                                      ;A09526;
     LDX.W EnemyIndex                                                     ;A09528;
     LDA.W Enemy.properties2,X                                            ;A0952B;
-    AND.W #$8000                                                         ;A0952E;
+    AND.W #EPROP2_GRAPHIC_UPDATED                                        ;A0952E;
     BEQ .next                                                            ;A09531;
     JSR.W ProcessExtendedTilemap                                         ;A09533;
     BRA .next                                                            ;A09536;
@@ -2574,7 +2574,7 @@ NormalEnemyFrozenAI:
 
   .unsetFrozenAI:
     LDA.W Enemy.AI,X                                                     ;A0959B;
-    AND.W #$FFFB                                                         ;A0959E;
+    AND.W #~E_AI_FROZEN                                                  ;A0959E;
     STA.W Enemy.AI,X                                                     ;A095A1;
     STA.W Enemy.freezeTimer,X                                            ;A095A4;
     LDA.W #$0000                                                         ;A095A7;
@@ -2835,7 +2835,7 @@ EnemyCollisionHandling:
     REP #$30                                                             ;A0975F;
     LDX.W EnemyIndex                                                     ;A09761;
     LDA.W Enemy.properties2,X                                            ;A09764;
-    BIT.W #$0004                                                         ;A09767;
+    BIT.W #EPROP2_EXTENDED_SPRITEMAP                                     ;A09767;
     BEQ .notExtendedSpritemap                                            ;A0976A;
     JSR.W Enemy_vs_Projectile_CollisionHandling_ExtendedSpritemap        ;A0976C;
     JSR.W Enemy_vs_Bomb_CollisionHandling_ExtendedSpritemap              ;A0976F;
@@ -3450,7 +3450,7 @@ Enemy_vs_Projectile_CollisionHandling_ExtendedSpritemap:
 
 +   LDX.W EnemyIndex                                                     ;A09BBE;
     LDA.W Enemy.properties,X                                             ;A09BC1;
-    BIT.W #$0400                                                         ;A09BC4;
+    BIT.W #EPROP_INTANGIBLE                                              ;A09BC4;
     BNE .returnUpper                                                     ;A09BC7;
     LDA.W Enemy.invincibilityTimer,X                                     ;A09BC9;
     BNE .returnUpper                                                     ;A09BCC;
@@ -3570,7 +3570,7 @@ Enemy_vs_Projectile_CollisionHandling_ExtendedSpritemap:
   .notSuperMissile:
     LDX.W EnemyIndex                                                     ;A09CBD;
     LDA.W Enemy.properties,X                                             ;A09CC0;
-    BIT.W #$1000                                                         ;A09CC3;
+    BIT.W #EPROP_BLOCK_PLASMA                                            ;A09CC3;
     BNE .delete                                                          ;A09CC6;
     LDA.W SamusProjectile_Types,Y                                        ;A09CC8;
     AND.W #$0008                                                         ;A09CCB;
@@ -3641,7 +3641,7 @@ Enemy_vs_Bomb_CollisionHandling_ExtendedSpritemap:
     BEQ .returnUpper                                                     ;A09D3E;
     LDX.W EnemyIndex                                                     ;A09D40;
     LDA.W Enemy.properties,X                                             ;A09D43;
-    BIT.W #$0400                                                         ;A09D46;
+    BIT.W #EPROP_INTANGIBLE                                              ;A09D46;
     BNE .returnUpper                                                     ;A09D49;
     LDA.W Enemy.invincibilityTimer,X                                     ;A09D4B;
     BNE .returnUpper                                                     ;A09D4E;
@@ -3889,7 +3889,7 @@ EnemyGrappleBeamCollisionDetection:
     JMP.W .loop                                                          ;A09F02;
 
   .hit:
-    LDA.W #$0001                                                         ;A09F05;
+    LDA.W #E_AI_GRAPPLE                                                  ;A09F05;
     STA.W Enemy.AI,X                                                     ;A09F08;
     LDY.W #$0000                                                         ;A09F0B;
     LDA.W Enemy.ID,X                                                     ;A09F0E;
@@ -3983,7 +3983,7 @@ GrappleAI_SamusLatchesOnWithGrapple:
 
   .frozen:
     LDX.W EnemyIndex                                                     ;A09FBA;
-    LDA.W #$0004                                                         ;A09FBD;
+    LDA.W #E_AI_FROZEN                                                   ;A09FBD;
     STA.W Enemy.AI,X                                                     ;A09FC0;
     RTL                                                                  ;A09FC3;
 
@@ -4004,7 +4004,7 @@ GrappleAI_EnemyGrappleDeath:
 ;;; $9FDF: Switch to frozen AI ;;;
 GrappleAI_SwitchToFrozenAI:
     LDX.W EnemyIndex                                                     ;A09FDF;
-    LDA.W #$0004                                                         ;A09FE2;
+    LDA.W #E_AI_FROZEN                                                   ;A09FE2;
     STA.W Enemy.AI,X                                                     ;A09FE5;
     RTL                                                                  ;A09FE8;
 
@@ -4046,7 +4046,7 @@ GrappleAI_SamusLatchesOnWithGrapple_NoInvincibility:
     STA.W GrappleBeam_EndXPosition                                       ;A0A02E;
     LDA.W Enemy.YPosition,X                                              ;A0A031;
     STA.W GrappleBeam_EndYPosition                                       ;A0A034;
-    LDA.W #$0004                                                         ;A0A037;
+    LDA.W #E_AI_FROZEN                                                   ;A0A037;
     STA.W Enemy.AI,X                                                     ;A0A03A;
     RTL                                                                  ;A0A03D;
 
@@ -4069,7 +4069,7 @@ GrappleAI_SamusLatchesOnWithGrapple_ParalyzeEnemy:
     STZ.W Enemy.AI,X                                                     ;A0A060;
     LDX.W EnemyIndex                                                     ;A0A063;
     LDA.W Enemy.properties2,X                                            ;A0A066;
-    ORA.W #$0001                                                         ;A0A069;
+    ORA.W #EPROP2_PARALYZED                                              ;A0A069;
     STA.W Enemy.properties2,X                                            ;A0A06C;
     RTL                                                                  ;A0A06F;
 
@@ -4078,7 +4078,7 @@ GrappleAI_SamusLatchesOnWithGrapple_ParalyzeEnemy:
 GrappleAI_SwitchToFrozenAI_duplicate:
 ; Clone of GrappleAI_SwitchToFrozenAI
     LDX.W EnemyIndex                                                     ;A0A070;
-    LDA.W #$0004                                                         ;A0A073;
+    LDA.W #E_AI_FROZEN                                                   ;A0A073;
     STA.W Enemy.AI,X                                                     ;A0A076;
     RTL                                                                  ;A0A079;
 
@@ -4225,7 +4225,7 @@ Enemy_vs_ProjectileCollisionHandling:
     CMP.W #Spritemap_Common_Nothing                                      ;A0A167;
     BEQ .returnUpper                                                     ;A0A16A;
     LDA.W Enemy.properties,Y                                             ;A0A16C;
-    BIT.W #$0400                                                         ;A0A16F;
+    BIT.W #EPROP_INTANGIBLE                                              ;A0A16F;
     BNE .returnUpper                                                     ;A0A172;
     LDA.W Enemy.ID,Y                                                     ;A0A174;
     CMP.W #EnemyHeaders_Respawn                                          ;A0A177;
@@ -4297,7 +4297,7 @@ Enemy_vs_ProjectileCollisionHandling:
     TAY                                                                  ;A0A1F3;
     LDX.W EnemyIndex                                                     ;A0A1F4;
     LDA.W Enemy.properties,X                                             ;A0A1F7;
-    BIT.W #$1000                                                         ;A0A1FA;
+    BIT.W #EPROP_BLOCK_PLASMA                                            ;A0A1FA;
     BNE .delete                                                          ;A0A1FD;
     LDA.W SamusProjectile_Types,Y                                        ;A0A1FF;
     BIT.W #$0008                                                         ;A0A202;
@@ -4517,7 +4517,7 @@ Process_Enemy_PowerBomb_Interaction:
     JSL.L .executeEnemyAI                                                ;A0A381;
     LDX.W EnemyIndex                                                     ;A0A385;
     LDA.W Enemy.properties,X                                             ;A0A388;
-    ORA.W #$0800                                                         ;A0A38B;
+    ORA.W #EPROP_PROCESS_OFFSCREEN                                       ;A0A38B;
     STA.W Enemy.properties,X                                             ;A0A38E;
 
   .next:
@@ -4558,7 +4558,7 @@ EnemyDeath:
     REP #$30                                                             ;A0A3B6;
     PHA                                                                  ;A0A3B8;
     LDA.W Enemy.AI,X                                                     ;A0A3B9;
-    CMP.W #$0001                                                         ;A0A3BC;
+    CMP.W #E_AI_GRAPPLE                                                  ;A0A3BC;
     BNE .checkA                                                          ;A0A3BF;
     LDA.W #GrappleBeamFunction_Dropped                                   ;A0A3C1;
     STA.W GrappleBeam_Function                                           ;A0A3C4;
@@ -4576,7 +4576,7 @@ EnemyDeath:
     LDA.W Temp_DeathExplosionType                                        ;A0A3D9;
     JSL.L SpawnEnemyProjectileY_ParameterA_XGraphics                     ;A0A3DC;
     LDA.W Enemy.properties,X                                             ;A0A3E0;
-    AND.W #$4000                                                         ;A0A3E3;
+    AND.W #EPROP_RESPAWN                                                 ;A0A3E3;
     STA.B DP_Temp12                                                      ;A0A3E6;
     LDY.W #$003E                                                         ;A0A3E8;
     LDX.W EnemyIndex                                                     ;A0A3EB;
@@ -4627,7 +4627,7 @@ RinkaDeath:
     LDA.W Temp_DeathExplosionType                                        ;A0A42A;
     JSL.L SpawnEnemyProjectileY_ParameterA_XGraphics                     ;A0A42D;
     LDA.W Enemy.properties,X                                             ;A0A431;
-    AND.W #$4000                                                         ;A0A434;
+    AND.W #EPROP_RESPAWN                                                 ;A0A434;
     STA.B DP_Temp12                                                      ;A0A437;
     LDY.W #$003E                                                         ;A0A439;
     LDX.W EnemyIndex                                                     ;A0A43C;
@@ -4787,7 +4787,7 @@ NormalEnemyTouchAI_NoDeathCheck:
     LDX.W EnemyIndex                                                     ;A0A537;
     STA.W Enemy.flashTimer,X                                             ;A0A53A;
     LDA.W Enemy.AI,X                                                     ;A0A53D;
-    ORA.W #$0002                                                         ;A0A540;
+    ORA.W #E_AI_HURT                                                     ;A0A540;
     STA.W Enemy.AI,X                                                     ;A0A543;
     STZ.W SamusInvincibilityTimer                                        ;A0A546;
     STZ.W SamusKnockbackTimer                                            ;A0A549;
@@ -4897,7 +4897,7 @@ NormalEnemyPowerBombAI_NoDeathCheck:
     LDX.W EnemyIndex                                                     ;A0A61C;
     STA.W Enemy.flashTimer,X                                             ;A0A61F;
     LDA.W Enemy.AI,X                                                     ;A0A622;
-    ORA.W #$0002                                                         ;A0A625;
+    ORA.W #E_AI_HURT                                                     ;A0A625;
     STA.W Enemy.AI,X                                                     ;A0A628;
     LDA.W Enemy.health,X                                                 ;A0A62B;
     SEC                                                                  ;A0A62E;
@@ -5148,7 +5148,7 @@ NormalEnemyShotAI_NoDeathCheck_NoEnemyShotGraphic:
     TYA                                                                  ;A0A7F2;
     STA.W Enemy.freezeTimer,X                                            ;A0A7F3;
     LDA.W Enemy.AI,X                                                     ;A0A7F6;
-    ORA.W #$0004                                                         ;A0A7F9;
+    ORA.W #E_AI_FROZEN                                                   ;A0A7F9;
     STA.W Enemy.AI,X                                                     ;A0A7FC;
     LDA.W #$000A                                                         ;A0A7FF;
     STA.W Enemy.invincibilityTimer,X                                     ;A0A802;
@@ -5172,7 +5172,7 @@ NormalEnemyShotAI_NoDeathCheck_NoEnemyShotGraphic:
     LDX.W EnemyIndex                                                     ;A0A823;
     STA.W Enemy.flashTimer,X                                             ;A0A826;
     LDA.W Enemy.AI,X                                                     ;A0A829;
-    ORA.W #$0002                                                         ;A0A82C;
+    ORA.W #E_AI_HURT                                                     ;A0A82C;
     STA.W Enemy.AI,X                                                     ;A0A82F;
     LDA.W Enemy.freezeTimer,X                                            ;A0A832;
     BNE .noFlashNoCry                                                    ;A0A835;
@@ -5230,7 +5230,7 @@ NormalEnemyShotAI_NoDeathCheck_NoEnemyShotGraphic:
     TYA                                                                  ;A0A898;
     STA.W Enemy.freezeTimer,X                                            ;A0A899;
     LDA.W Enemy.AI,X                                                     ;A0A89C;
-    ORA.W #$0004                                                         ;A0A89F;
+    ORA.W #E_AI_FROZEN                                                   ;A0A89F;
     STA.W Enemy.AI,X                                                     ;A0A8A2;
     LDA.W #$000A                                                         ;A0A8A5;
     STA.W Enemy.invincibilityTimer,X                                     ;A0A8A8;
@@ -5445,7 +5445,7 @@ Samus_vs_SolidEnemy_CollisionDetection:
     LDA.W Enemy.freezeTimer,X                                            ;A0A9DC;
     BNE .notFrozenNotSolid                                               ;A0A9DF;
     LDA.W Enemy.properties,X                                             ;A0A9E1;
-    BIT.W #$8000                                                         ;A0A9E4;
+    BIT.W #EPROP_SOLID                                                   ;A0A9E4;
     BNE .notFrozenNotSolid                                               ;A0A9E7;
     JMP.W .next                                                          ;A0A9E9;
 
@@ -8826,7 +8826,7 @@ ProcessEnemyInstructions:
     PHB                                                                  ;A0C26A;
     LDX.W EnemyIndex                                                     ;A0C26B;
     LDA.W Enemy.AI,X                                                     ;A0C26E;
-    AND.W #$0004                                                         ;A0C271;
+    AND.W #E_AI_FROZEN                                                   ;A0C271;
     BNE .return                                                          ;A0C274;
     DEC.W Enemy.instTimer,X                                              ;A0C276;
     BNE .noUpdate                                                        ;A0C279;
@@ -8856,7 +8856,7 @@ ProcessEnemyInstructions:
     ADC.W #$0004                                                         ;A0C2A0;
     STA.W Enemy.instList,X                                               ;A0C2A3;
     LDA.W Enemy.properties2,X                                            ;A0C2A6;
-    ORA.W #$8000                                                         ;A0C2A9;
+    ORA.W #EPROP2_GRAPHIC_UPDATED                                        ;A0C2A9;
     STA.W Enemy.properties2,X                                            ;A0C2AC;
 
   .return:
@@ -8866,7 +8866,7 @@ ProcessEnemyInstructions:
 
   .noUpdate:
     LDA.W Enemy.properties2,X                                            ;A0C2B1;
-    AND.W #$7FFF                                                         ;A0C2B4;
+    AND.W #~EPROP2_GRAPHIC_UPDATED                                       ;A0C2B4;
     STA.W Enemy.properties2,X                                            ;A0C2B7;
     PLB                                                                  ;A0C2BA;
     RTS                                                                  ;A0C2BB;
