@@ -969,260 +969,260 @@ AnimatedTilesObject_TourianStatueDraygon:
 
 ;;; $8564: Crateria 4 - Crateria lake ;;;
 AnimatedTiles_CrateriaLake_0:
-incbin "../data/AnimatedTiles_CrateriaLake_0.bin" ; $200 bytes
+incbin "../data/animated_tiles/CrateriaLake_0.bin" ; $200 bytes
 
 AnimatedTiles_CrateriaLake_1:
-incbin "../data/AnimatedTiles_CrateriaLake_1.bin" ; $200 bytes
+incbin "../data/animated_tiles/CrateriaLake_1.bin" ; $200 bytes
 
 AnimatedTiles_CrateriaLake_2:
-incbin "../data/AnimatedTiles_CrateriaLake_2.bin" ; $200 bytes
+incbin "../data/animated_tiles/CrateriaLake_2.bin" ; $200 bytes
 
 
 ;;; $8B64: Crateria 8 - unused Crateria lava ;;;
 UNUSED_AnimatedTiles_CrateriaLava_0_878B64:
-incbin "../data/UNUSED_AnimatedTiles_CrateriaLava_0.bin" ; $C0 bytes
+incbin "../data/animated_tiles/UNUSED_CrateriaLava_0.bin" ; $C0 bytes
 
 UNUSED_AnimatedTiles_CrateriaLava_1_878C24:
-incbin "../data/UNUSED_AnimatedTiles_CrateriaLava_1.bin" ; $C0 bytes
+incbin "../data/animated_tiles/UNUSED_CrateriaLava_1.bin" ; $C0 bytes
 
 UNUSED_AnimatedTiles_CrateriaLava_2_878CE4:
-incbin "../data/UNUSED_AnimatedTiles_CrateriaLava_2.bin" ; $C0 bytes
+incbin "../data/animated_tiles/UNUSED_CrateriaLava_2.bin" ; $C0 bytes
 
 UNUSED_AnimatedTiles_CrateriaLava_3_878DA4:
-incbin "../data/UNUSED_AnimatedTiles_CrateriaLava_3.bin" ; $C0 bytes
+incbin "../data/animated_tiles/UNUSED_CrateriaLava_3.bin" ; $C0 bytes
 
 
 ;;; $8E64: Wrecked Ship 4/8 - Wrecked Ship treadmill ;;;
 AnimatedTiles_WreckedShipTreadmill_0:
-incbin "../data/AnimatedTiles_WreckedShipTreadmill_0.bin" ; $20 bytes
+incbin "../data/animated_tiles/WreckedShipTreadmill_0.bin" ; $20 bytes
 
 AnimatedTiles_WreckedShipTreadmill_1:
-incbin "../data/AnimatedTiles_WreckedShipTreadmill_1.bin" ; $20 bytes
+incbin "../data/animated_tiles/WreckedShipTreadmill_1.bin" ; $20 bytes
 
 AnimatedTiles_WreckedShipTreadmill_2:
-incbin "../data/AnimatedTiles_WreckedShipTreadmill_2.bin" ; $20 bytes
+incbin "../data/animated_tiles/WreckedShipTreadmill_2.bin" ; $20 bytes
 
 AnimatedTiles_WreckedShipTreadmill_3:
-incbin "../data/AnimatedTiles_WreckedShipTreadmill_3.bin" ; $20 bytes
+incbin "../data/animated_tiles/WreckedShipTreadmill_3.bin" ; $20 bytes
 
 
 ;;; $8EE4: Wrecked Ship 10h - Wrecked Ship screen ;;;
 AnimatedTiles_WreckedShipScreen_0:
-incbin "../data/AnimatedTiles_WreckedShipScreen_0.bin" ; $80 bytes
+incbin "../data/animated_tiles/WreckedShipScreen_0.bin" ; $80 bytes
 
 AnimatedTiles_WreckedShipScreen_1:
-incbin "../data/AnimatedTiles_WreckedShipScreen_1.bin" ; $80 bytes
+incbin "../data/animated_tiles/WreckedShipScreen_1.bin" ; $80 bytes
 
 AnimatedTiles_WreckedShipScreen_2:
-incbin "../data/AnimatedTiles_WreckedShipScreen_2.bin" ; $80 bytes
+incbin "../data/animated_tiles/WreckedShipScreen_2.bin" ; $80 bytes
 
 
 if !FEATURE_KEEP_UNREFERENCED
 ;;; $9064: Unused. "X" ;;;
 UNUSED_AnimatedTiles_X_879064:
-incbin "../data/AnimatedTiles_X_879064.bin" ; $100 bytes
+incbin "../data/animated_tiles/X_879064.bin" ; $100 bytes
 endif ; !FEATURE_KEEP_UNREFERENCED
 
 
 ;;; $9164: Maridia 8 - Maridia sand falling ;;;
 AnimatedTiles_MaridiaSandFalling_0:
-incbin "../data/AnimatedTiles_MaridiaSandFalling_0.bin" ; $20 bytes
+incbin "../data/animated_tiles/MaridiaSandFalling_0.bin" ; $20 bytes
 
 AnimatedTiles_MaridiaSandFalling_1:
-incbin "../data/AnimatedTiles_MaridiaSandFalling_1.bin" ; $20 bytes
+incbin "../data/animated_tiles/MaridiaSandFalling_1.bin" ; $20 bytes
 
 AnimatedTiles_MaridiaSandFalling_2:
-incbin "../data/AnimatedTiles_MaridiaSandFalling_2.bin" ; $20 bytes
+incbin "../data/animated_tiles/MaridiaSandFalling_2.bin" ; $20 bytes
 
 AnimatedTiles_MaridiaSandFalling_3:
-incbin "../data/AnimatedTiles_MaridiaSandFalling_3.bin" ; $20 bytes
+incbin "../data/animated_tiles/MaridiaSandFalling_3.bin" ; $20 bytes
 
 
 ;;; $91E4: Maridia 4 - Maridia sand ceiling ;;;
 AnimatedTiles_MaridiaSandCeiling_0:
-incbin "../data/AnimatedTiles_MaridiaSandCeiling_0.bin" ; $40 bytes
+incbin "../data/animated_tiles/MaridiaSandCeiling_0.bin" ; $40 bytes
 
 AnimatedTiles_MaridiaSandCeiling_1:
-incbin "../data/AnimatedTiles_MaridiaSandCeiling_1.bin" ; $40 bytes
+incbin "../data/animated_tiles/MaridiaSandCeiling_1.bin" ; $40 bytes
 
 AnimatedTiles_MaridiaSandCeiling_2:
-incbin "../data/AnimatedTiles_MaridiaSandCeiling_2.bin" ; $40 bytes
+incbin "../data/animated_tiles/MaridiaSandCeiling_2.bin" ; $40 bytes
 
 AnimatedTiles_MaridiaSandCeiling_3:
-incbin "../data/AnimatedTiles_MaridiaSandCeiling_3.bin" ; $40 bytes
+incbin "../data/animated_tiles/MaridiaSandCeiling_3.bin" ; $40 bytes
 
 
 if !FEATURE_KEEP_UNREFERENCED
 ;;; $92E4: Unused. "X" ;;;
 UNUSED_AnimatedTiles_X_8792E4:
-incbin "../data/AnimatedTiles_X_8792E4.bin" ; $80 bytes
+incbin "../data/animated_tiles/X_8792E4.bin" ; $80 bytes
 endif ; !FEATURE_KEEP_UNREFERENCED
 
 
 ;;; $9364: Phantoon statue ;;;
 AnimatedTiles_PhantoonStatue_0:
-incbin "../data/AnimatedTiles_PhantoonStatue_0.bin" ; $80 bytes
+incbin "../data/animated_tiles/PhantoonStatue_0.bin" ; $80 bytes
 
 AnimatedTiles_PhantoonStatue_1:
-incbin "../data/AnimatedTiles_PhantoonStatue_1.bin" ; $80 bytes
+incbin "../data/animated_tiles/PhantoonStatue_1.bin" ; $80 bytes
 
 AnimatedTiles_PhantoonStatue_2:
-incbin "../data/AnimatedTiles_PhantoonStatue_2.bin" ; $80 bytes
+incbin "../data/animated_tiles/PhantoonStatue_2.bin" ; $80 bytes
 
 
 ;;; $94E4: Ridley statue ;;;
 AnimatedTiles_RidleyStatue_0:
-incbin "../data/AnimatedTiles_RidleyStatue_0.bin" ; $40 bytes
+incbin "../data/animated_tiles/RidleyStatue_0.bin" ; $40 bytes
 
 AnimatedTiles_RidleyStatue_1:
-incbin "../data/AnimatedTiles_RidleyStatue_1.bin" ; $40 bytes
+incbin "../data/animated_tiles/RidleyStatue_1.bin" ; $40 bytes
 
 AnimatedTiles_RidleyStatue_2:
-incbin "../data/AnimatedTiles_RidleyStatue_2.bin" ; $40 bytes
+incbin "../data/animated_tiles/RidleyStatue_2.bin" ; $40 bytes
 
 
 ;;; $95A4: Draygon statue ;;;
 AnimatedTiles_DraygonStatue_0:
-incbin "../data/AnimatedTiles_DraygonStatue_0.bin" ; $80 bytes
+incbin "../data/animated_tiles/DraygonStatue_0.bin" ; $80 bytes
 
 AnimatedTiles_DraygonStatue_1:
-incbin "../data/AnimatedTiles_DraygonStatue_1.bin" ; $80 bytes
+incbin "../data/animated_tiles/DraygonStatue_1.bin" ; $80 bytes
 
 AnimatedTiles_DraygonStatue_2:
-incbin "../data/AnimatedTiles_DraygonStatue_2.bin" ; $80 bytes
+incbin "../data/animated_tiles/DraygonStatue_2.bin" ; $80 bytes
 
 
 ;;; $9724: Kraid statue ;;;
 AnimatedTiles_KraidStatue_0:
-incbin "../data/AnimatedTiles_KraidStatue_0.bin" ; $40 bytes
+incbin "../data/animated_tiles/KraidStatue_0.bin" ; $40 bytes
 
 AnimatedTiles_KraidStatue_1:
-incbin "../data/AnimatedTiles_KraidStatue_1.bin" ; $40 bytes
+incbin "../data/animated_tiles/KraidStatue_1.bin" ; $40 bytes
 
 AnimatedTiles_KraidStatue_2:
-incbin "../data/AnimatedTiles_KraidStatue_2.bin" ; $40 bytes
+incbin "../data/animated_tiles/KraidStatue_2.bin" ; $40 bytes
 
 
 ;;; $97E4: Phantoon statue - other ;;;
 AnimatedTiles_PhantoonStatue_Other:
-incbin "../data/AnimatedTiles_PhantoonStatue_Other.bin" ; $80 bytes
+incbin "../data/animated_tiles/PhantoonStatue_Other.bin" ; $80 bytes
 
 
 ;;; $9864: Ridley statue - other ;;;
 AnimatedTiles_RidleyStatue_Other:
-incbin "../data/AnimatedTiles_RidleyStatue_Other.bin" ; $40 bytes
+incbin "../data/animated_tiles/RidleyStatue_Other.bin" ; $40 bytes
 
 
 ;;; $98A4: Draygon statue - other ;;;
 AnimatedTiles_DraygonStatue_Other:
-incbin "../data/AnimatedTiles_DraygonStatue_Other.bin" ; $40 bytes
+incbin "../data/animated_tiles/DraygonStatue_Other.bin" ; $40 bytes
 
 
 ;;; $98E4: Kraid statue - other ;;;
 AnimatedTiles_KraidStatue_Other:
-incbin "../data/AnimatedTiles_KraidStatue_Other.bin" ; $80 bytes
+incbin "../data/animated_tiles/KraidStatue_Other.bin" ; $80 bytes
 
 
 ;;; $9964: Brinstar 4 - Brinstar plant ;;;
 AnimatedTiles_BrinstarMouth_0:
-incbin "../data/AnimatedTiles_BrinstarMouth_0.bin" ; $E0 bytes
+incbin "../data/animated_tiles/BrinstarMouth_0.bin" ; $E0 bytes
 
 AnimatedTiles_BrinstarMouth_1:
-incbin "../data/AnimatedTiles_BrinstarMouth_1.bin" ; $E0 bytes
+incbin "../data/animated_tiles/BrinstarMouth_1.bin" ; $E0 bytes
 
 AnimatedTiles_BrinstarMouth_2:
-incbin "../data/AnimatedTiles_BrinstarMouth_2.bin" ; $E0 bytes
+incbin "../data/animated_tiles/BrinstarMouth_2.bin" ; $E0 bytes
 
 
 ;;; $9C04: All areas 1 - vertical spikes ;;;
 AnimatedTiles_VerticalSpikes_0:
-incbin "../data/AnimatedTiles_VerticalSpikes_0.bin" ; $80 bytes
+incbin "../data/animated_tiles/VerticalSpikes_0.bin" ; $80 bytes
 
 AnimatedTiles_VerticalSpikes_1:
-incbin "../data/AnimatedTiles_VerticalSpikes_1.bin" ; $80 bytes
+incbin "../data/animated_tiles/VerticalSpikes_1.bin" ; $80 bytes
 
 AnimatedTiles_VerticalSpikes_2:
-incbin "../data/AnimatedTiles_VerticalSpikes_2.bin" ; $80 bytes
+incbin "../data/animated_tiles/VerticalSpikes_2.bin" ; $80 bytes
 
 
 ;;; $9D84: All areas 2 - horizontal spikes ;;;
 AnimatedTiles_HorizontalSpikes_0:
-incbin "../data/AnimatedTiles_HorizontalSpikes_0.bin" ; $80 bytes
+incbin "../data/animated_tiles/HorizontalSpikes_0.bin" ; $80 bytes
 
 AnimatedTiles_HorizontalSpikes_1:
-incbin "../data/AnimatedTiles_HorizontalSpikes_1.bin" ; $80 bytes
+incbin "../data/animated_tiles/HorizontalSpikes_1.bin" ; $80 bytes
 
 AnimatedTiles_HorizontalSpikes_2:
-incbin "../data/AnimatedTiles_HorizontalSpikes_2.bin" ; $80 bytes
+incbin "../data/animated_tiles/HorizontalSpikes_2.bin" ; $80 bytes
 
 
 if !FEATURE_KEEP_UNREFERENCED
 ;;; $9F04: Unused. "X" ;;;
 UNUSED_AnimatedTiles_X_879F04:
-incbin "../data/AnimatedTiles_X_879F04.bin" ; $660 bytes
+incbin "../data/animated_tiles/X_879F04.bin" ; $660 bytes
 endif ; !FEATURE_KEEP_UNREFERENCED
 
 
 ;;; $A564: Lava ;;;
 AnimatedTiles_Lava_0:
-incbin "../data/AnimatedTiles_Lava_0.bin" ; $40 bytes
+incbin "../data/animated_tiles/Lava_0.bin" ; $40 bytes
 
 AnimatedTiles_Lava_1:
-incbin "../data/AnimatedTiles_Lava_1.bin" ; $40 bytes
+incbin "../data/animated_tiles/Lava_1.bin" ; $40 bytes
 
 AnimatedTiles_Lava_2:
-incbin "../data/AnimatedTiles_Lava_2.bin" ; $40 bytes
+incbin "../data/animated_tiles/Lava_2.bin" ; $40 bytes
 
 AnimatedTiles_Lava_3:
-incbin "../data/AnimatedTiles_Lava_3.bin" ; $40 bytes
+incbin "../data/animated_tiles/Lava_3.bin" ; $40 bytes
 
 AnimatedTiles_Lava_4:
-incbin "../data/AnimatedTiles_Lava_4.bin" ; $40 bytes
+incbin "../data/animated_tiles/Lava_4.bin" ; $40 bytes
 
 
 ;;; $A6A4: Acid ;;;
 AnimatedTiles_Acid_0:
-incbin "../data/AnimatedTiles_Acid_0.bin" ; $40 bytes
+incbin "../data/animated_tiles/Acid_0.bin" ; $40 bytes
 
 AnimatedTiles_Acid_1:
-incbin "../data/AnimatedTiles_Acid_1.bin" ; $40 bytes
+incbin "../data/animated_tiles/Acid_1.bin" ; $40 bytes
 
 AnimatedTiles_Acid_2:
-incbin "../data/AnimatedTiles_Acid_2.bin" ; $40 bytes
+incbin "../data/animated_tiles/Acid_2.bin" ; $40 bytes
 
 AnimatedTiles_Acid_3:
-incbin "../data/AnimatedTiles_Acid_3.bin" ; $40 bytes
+incbin "../data/animated_tiles/Acid_3.bin" ; $40 bytes
 
 AnimatedTiles_Acid_4:
-incbin "../data/AnimatedTiles_Acid_4.bin" ; $40 bytes
+incbin "../data/animated_tiles/Acid_4.bin" ; $40 bytes
 
 
 ;;; $A7E4: Spores ;;;
 AnimatedTiles_Spores_0:
-incbin "../data/AnimatedTiles_Spores_0.bin" ; $30 bytes
+incbin "../data/animated_tiles/Spores_0.bin" ; $30 bytes
 
 AnimatedTiles_Spores_1:
-incbin "../data/AnimatedTiles_Spores_1.bin" ; $30 bytes
+incbin "../data/animated_tiles/Spores_1.bin" ; $30 bytes
 
 AnimatedTiles_Spores_2:
-incbin "../data/AnimatedTiles_Spores_2.bin" ; $30 bytes
+incbin "../data/animated_tiles/Spores_2.bin" ; $30 bytes
 
 
 ;;; $A874: Rain ;;;
 AnimatedTiles_Rain_0:
-incbin "../data/AnimatedTiles_Rain_0.bin" ; $50 bytes
+incbin "../data/animated_tiles/Rain_0.bin" ; $50 bytes
 
 AnimatedTiles_Rain_1:
-incbin "../data/AnimatedTiles_Rain_1.bin" ; $50 bytes
+incbin "../data/animated_tiles/Rain_1.bin" ; $50 bytes
 
 AnimatedTiles_Rain_2:
-incbin "../data/AnimatedTiles_Rain_2.bin" ; $50 bytes
+incbin "../data/animated_tiles/Rain_2.bin" ; $50 bytes
 
 AnimatedTiles_Rain_3:
-incbin "../data/AnimatedTiles_Rain_3.bin" ; $50 bytes
+incbin "../data/animated_tiles/Rain_3.bin" ; $50 bytes
 
 AnimatedTiles_Rain_4:
-incbin "../data/AnimatedTiles_Rain_4.bin" ; $50 bytes
+incbin "../data/animated_tiles/Rain_4.bin" ; $50 bytes
 
 
 ;;; $AA04: Zeros ;;;

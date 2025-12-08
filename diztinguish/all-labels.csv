@@ -36372,7 +36372,7 @@ $B5A000,11902976,MapTilemaps_norfair,,USED
 $B5B000,11907072,MapTilemaps_wreckedShip,,USED
 $B5C000,11911168,MapTilemaps_maridia,,USED
 $B5D000,11915264,MapTilemaps_tourian,,USED
-$B5E000,11919360,UNUSED_MapTilemaps_ceres_B5E000,,USED
+$B5E000,11919360,MapTilemaps_ceres,,USED
 $B5F000,11923456,Freespace_BankB5_F000,,USED
 $B68000,11960320,Tiles_PauseScreen_BG1_BG2,,USED
 $B6C000,11976704,Tiles_Menu_PauseScreen_Sprites,,USED

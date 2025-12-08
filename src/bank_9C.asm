@@ -26,7 +26,7 @@ SamusTiles_Top_SetA_Entry0:
 ; D7h: Facing right - crystal flash ending - frame 0
 ; DFh: Unused. Related to Draygon - frame 7
 ; E8h: Facing right - Samus drained - crouching/falling - frame 0
-incbin "../data/SamusTiles_Top_SetA_Entry0.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry0.bin" ; $A0 bytes
 
 
 ;;; $80A0: Samus top tiles - set Ah - entry 1 ;;;
@@ -49,7 +49,7 @@ SamusTiles_Top_SetA_Entry1:
 ; 80h: Facing left  - morph ball - spring ball - in air - frame 5
 ; C5h: Unused - frame 5
 ; DFh: Unused. Related to Draygon - frame 5
-incbin "../data/SamusTiles_Top_SetA_Entry1.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry1.bin" ; $A0 bytes
 
 
 ;;; $8140: Samus top tiles - set Ah - entry 2 ;;;
@@ -72,7 +72,7 @@ SamusTiles_Top_SetA_Entry2:
 ; 80h: Facing left  - morph ball - spring ball - in air - frame 3
 ; C5h: Unused - frame 3
 ; DFh: Unused. Related to Draygon - frame 3
-incbin "../data/SamusTiles_Top_SetA_Entry2.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry2.bin" ; $A0 bytes
 
 
 ;;; $81E0: Samus top tiles - set Ah - entry 3 ;;;
@@ -95,7 +95,7 @@ SamusTiles_Top_SetA_Entry3:
 ; 80h: Facing left  - morph ball - spring ball - in air - frame 1
 ; C5h: Unused - frame 1
 ; DFh: Unused. Related to Draygon - frame 1
-incbin "../data/SamusTiles_Top_SetA_Entry3.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry3.bin" ; $A0 bytes
 
 
 ;;; $8280: Samus top tiles - set Ah - entry 4 ;;;
@@ -118,7 +118,7 @@ SamusTiles_Top_SetA_Entry4:
 ; 80h: Facing left  - morph ball - spring ball - in air - frame 6
 ; C5h: Unused - frame 6
 ; DFh: Unused. Related to Draygon - frame 6
-incbin "../data/SamusTiles_Top_SetA_Entry4.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry4.bin" ; $A0 bytes
 
 
 ;;; $8320: Samus top tiles - set Ah - entry 5 ;;;
@@ -141,7 +141,7 @@ SamusTiles_Top_SetA_Entry5:
 ; 80h: Facing left  - morph ball - spring ball - in air - frame 4
 ; C5h: Unused - frame 4
 ; DFh: Unused. Related to Draygon - frame 4
-incbin "../data/SamusTiles_Top_SetA_Entry5.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry5.bin" ; $A0 bytes
 
 
 ;;; $83C0: Samus top tiles - set Ah - entry 6 ;;;
@@ -164,7 +164,7 @@ SamusTiles_Top_SetA_Entry6:
 ; 80h: Facing left  - morph ball - spring ball - in air - frame 2
 ; C5h: Unused - frame 2
 ; DFh: Unused. Related to Draygon - frame 2
-incbin "../data/SamusTiles_Top_SetA_Entry6.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry6.bin" ; $A0 bytes
 
 
 ;;; $8460: Samus top tiles - set Ah - entry 7 ;;;
@@ -187,7 +187,7 @@ SamusTiles_Top_SetA_Entry7:
 ; 80h: Facing left  - morph ball - spring ball - in air - frame 0
 ; C5h: Unused - frame 0
 ; DFh: Unused. Related to Draygon - frame 0
-incbin "../data/SamusTiles_Top_SetA_Entry7.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry7.bin" ; $A0 bytes
 
 
 ;;; $8500: Samus top tiles - set Ah - entry 8 ;;;
@@ -206,7 +206,7 @@ SamusTiles_Top_SetA_Entry8:
 ; 42h: Unused - frame 1
 ; 83h: Facing right - wall jump - frame 3
 ; 84h: Facing left  - wall jump - frame 3
-incbin "../data/SamusTiles_Top_SetA_Entry8.bin" ; $100 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry8.bin" ; $100 bytes
 
 
 ;;; $8600: Samus top tiles - set Ah - entry 9 ;;;
@@ -227,7 +227,7 @@ SamusTiles_Top_SetA_Entry9:
 ; 50h: Facing right - damage boost - frame 8
 ; 83h: Facing right - wall jump - frame 4
 ; 84h: Facing left  - wall jump - frame 4
-incbin "../data/SamusTiles_Top_SetA_Entry9.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry9.bin" ; $200 bytes
 
 
 ;;; $8800: Samus top tiles - set Ah - entry Ah ;;;
@@ -248,7 +248,7 @@ SamusTiles_Top_SetA_EntryA:
 ; 50h: Facing right - damage boost - frame 7
 ; 83h: Facing right - wall jump - frame 5
 ; 84h: Facing left  - wall jump - frame 5
-incbin "../data/SamusTiles_Top_SetA_EntryA.bin" ; $100 bytes
+incbin "../data/samus_gfx/Top_SetA_EntryA.bin" ; $100 bytes
 
 
 ;;; $8900: Samus top tiles - set Ah - entry Bh ;;;
@@ -269,7 +269,7 @@ SamusTiles_Top_SetA_EntryB:
 ; 50h: Facing right - damage boost - frame 6
 ; 83h: Facing right - wall jump - frame 6
 ; 84h: Facing left  - wall jump - frame 6
-incbin "../data/SamusTiles_Top_SetA_EntryB.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_SetA_EntryB.bin" ; $200 bytes
 
 
 ;;; $8B00: Samus top tiles - set Ah - entry Ch ;;;
@@ -290,7 +290,7 @@ SamusTiles_Top_SetA_EntryC:
 ; 50h: Facing right - damage boost - frame 5
 ; 83h: Facing right - wall jump - frame 7
 ; 84h: Facing left  - wall jump - frame 7
-incbin "../data/SamusTiles_Top_SetA_EntryC.bin" ; $100 bytes
+incbin "../data/samus_gfx/Top_SetA_EntryC.bin" ; $100 bytes
 
 
 ;;; $8C00: Samus top tiles - set Ah - entry Dh ;;;
@@ -311,7 +311,7 @@ SamusTiles_Top_SetA_EntryD:
 ; 50h: Facing right - damage boost - frame 4
 ; 83h: Facing right - wall jump - frame 8
 ; 84h: Facing left  - wall jump - frame 8
-incbin "../data/SamusTiles_Top_SetA_EntryD.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_SetA_EntryD.bin" ; $200 bytes
 
 
 ;;; $8E00: Samus top tiles - set Ah - entry Eh ;;;
@@ -332,7 +332,7 @@ SamusTiles_Top_SetA_EntryE:
 ; 50h: Facing right - damage boost - frame 3
 ; 83h: Facing right - wall jump - frame 9
 ; 84h: Facing left  - wall jump - frame 9
-incbin "../data/SamusTiles_Top_SetA_EntryE.bin" ; $100 bytes
+incbin "../data/samus_gfx/Top_SetA_EntryE.bin" ; $100 bytes
 
 
 ;;; $8F00: Samus top tiles - set Ah - entry Fh ;;;
@@ -353,7 +353,7 @@ SamusTiles_Top_SetA_EntryF:
 ; 50h: Facing right - damage boost - frame 2
 ; 83h: Facing right - wall jump - frame Ah
 ; 84h: Facing left  - wall jump - frame Ah
-incbin "../data/SamusTiles_Top_SetA_EntryF.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_SetA_EntryF.bin" ; $200 bytes
 
 
 ;;; $9100: Samus top tiles - set Ah - entry 10h ;;;
@@ -364,7 +364,7 @@ SamusTiles_Top_SetA_Entry10:
 ; 82h: Facing left  - screw attack - frames 1..3
 ; 83h: Facing right - wall jump - frames 17h..19h
 ; 84h: Facing left  - wall jump - frames 17h..19h
-incbin "../data/SamusTiles_Top_SetA_Entry10.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry10.bin" ; $140 bytes
 
 
 ;;; $9240: Samus top tiles - set Ah - entry 11h ;;;
@@ -375,7 +375,7 @@ SamusTiles_Top_SetA_Entry11:
 ; 82h: Facing left  - screw attack - frames 7..9
 ; 83h: Facing right - wall jump - frames 1Dh..1Fh
 ; 84h: Facing left  - wall jump - frames 1Dh..1Fh
-incbin "../data/SamusTiles_Top_SetA_Entry11.bin" ; $160 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry11.bin" ; $160 bytes
 
 
 ;;; $93A0: Samus top tiles - set Ah - entry 12h ;;;
@@ -386,7 +386,7 @@ SamusTiles_Top_SetA_Entry12:
 ; 82h: Facing left  - screw attack - frames Dh..Fh
 ; 83h: Facing right - wall jump - frames 23h..25h
 ; 84h: Facing left  - wall jump - frames 23h..25h
-incbin "../data/SamusTiles_Top_SetA_Entry12.bin" ; $160 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry12.bin" ; $160 bytes
 
 
 ;;; $9500: Samus top tiles - set Ah - entry 13h ;;;
@@ -397,7 +397,7 @@ SamusTiles_Top_SetA_Entry13:
 ; 82h: Facing left  - screw attack - frames 13h..15h
 ; 83h: Facing right - wall jump - frames 29h..2Bh
 ; 84h: Facing left  - wall jump - frames 29h..2Bh
-incbin "../data/SamusTiles_Top_SetA_Entry13.bin" ; $100 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry13.bin" ; $100 bytes
 
 
 ;;; $9600: Samus top tiles - set Ah - entry 14h ;;;
@@ -424,13 +424,13 @@ SamusTiles_Top_SetA_Entry14:
 ; 84h: Facing left  - wall jump - frames 20h..22h
 ; 84h: Facing left  - wall jump - frames 26h..28h
 ; 84h: Facing left  - wall jump - frames 2Ch..2Eh
-incbin "../data/SamusTiles_Top_SetA_Entry14.bin" ; $20 bytes
+incbin "../data/samus_gfx/Top_SetA_Entry14.bin" ; $20 bytes
 
 
 ;;; $9620: Samus top tiles - set Bh - entry 0 ;;;
 SamusTiles_Top_SetB_Entry0:
 ; Unused
-incbin "../data/SamusTiles_Top_SetB_Entry0.bin" ; $20 bytes
+incbin "../data/samus_gfx/Top_SetB_Entry0.bin" ; $20 bytes
 
 
 ;;; $9640: Samus top tiles - set Bh - entry 1 ;;;
@@ -453,13 +453,13 @@ SamusTiles_Top_SetB_Entry1:
 ; 80h: Facing left  - morph ball - spring ball - in air - frame 9
 ; C5h: Unused - frame 9
 ; DFh: Unused. Related to Draygon - frame 9
-incbin "../data/SamusTiles_Top_SetB_Entry1.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetB_Entry1.bin" ; $A0 bytes
 
 
 ;;; $96E0: Samus top tiles - set Bh - entry 2 ;;;
 SamusTiles_Top_SetB_Entry2:
 ; Unused
-incbin "../data/SamusTiles_Top_SetB_Entry2.bin" ; $A0 bytes
+incbin "../data/samus_gfx/Top_SetB_Entry2.bin" ; $A0 bytes
 
 
 ;;; $9780: Samus top tiles - set Bh - entry 3 ;;;
@@ -471,7 +471,7 @@ SamusTiles_Top_SetB_Entry3:
 ; DCh: Unused - frame 2
 ; DEh: Unused - frame 0
 ; E9h: Facing left  - Samus drained - crouching/falling - frame 0
-incbin "../data/SamusTiles_Top_SetB_Entry3.bin" ; $C0 bytes
+incbin "../data/samus_gfx/Top_SetB_Entry3.bin" ; $C0 bytes
 
 
 ;;; $9840: Samus top tiles - set Bh - entry 4 ;;;
@@ -485,7 +485,7 @@ SamusTiles_Top_SetB_Entry4:
 ; DCh: Unused - frame 1
 ; DEh: Unused - frame 1
 ; E9h: Facing left  - Samus drained - crouching/falling - frame 1
-incbin "../data/SamusTiles_Top_SetB_Entry4.bin" ; $100 bytes
+incbin "../data/samus_gfx/Top_SetB_Entry4.bin" ; $100 bytes
 
 
 ;;; $9940: Samus top tiles - set Bh - entry 5 ;;;
@@ -497,7 +497,7 @@ SamusTiles_Top_SetB_Entry5:
 ; DBh: Unused - frame 2
 ; DDh: Unused - frame 0
 ; E8h: Facing right - Samus drained - crouching/falling - frame 1
-incbin "../data/SamusTiles_Top_SetB_Entry5.bin" ; $C0 bytes
+incbin "../data/samus_gfx/Top_SetB_Entry5.bin" ; $C0 bytes
 
 
 ;;; $9A00: Samus top tiles - set Bh - entry 6 ;;;
@@ -511,7 +511,7 @@ SamusTiles_Top_SetB_Entry6:
 ; DBh: Unused - frame 1
 ; DDh: Unused - frame 1
 ; E8h: Facing right - Samus drained - crouching/falling - frame 2
-incbin "../data/SamusTiles_Top_SetB_Entry6.bin" ; $100 bytes
+incbin "../data/samus_gfx/Top_SetB_Entry6.bin" ; $100 bytes
 
 
 ;;; $9B00: Samus top tiles - set 3 - entry 0 ;;;
@@ -528,7 +528,7 @@ SamusTiles_Top_Set3_Entry0:
 ; 61h: Unused - frame 38h
 ; B2h: Facing clockwise     - grapple swinging - frame 18h
 ; B2h: Facing clockwise     - grapple swinging - frame 38h
-incbin "../data/SamusTiles_Top_Set3_Entry0.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry0.bin" ; $140 bytes
 
 
 ;;; $9C40: Samus top tiles - set 3 - entry 1 ;;;
@@ -545,7 +545,7 @@ SamusTiles_Top_Set3_Entry1:
 ; 61h: Unused - frame 37h
 ; B2h: Facing clockwise     - grapple swinging - frame 17h
 ; B2h: Facing clockwise     - grapple swinging - frame 37h
-incbin "../data/SamusTiles_Top_Set3_Entry1.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry1.bin" ; $140 bytes
 
 
 ;;; $9D80: Samus top tiles - set 3 - entry 2 ;;;
@@ -562,7 +562,7 @@ SamusTiles_Top_Set3_Entry2:
 ; 61h: Unused - frame 36h
 ; B2h: Facing clockwise     - grapple swinging - frame 16h
 ; B2h: Facing clockwise     - grapple swinging - frame 36h
-incbin "../data/SamusTiles_Top_Set3_Entry2.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry2.bin" ; $180 bytes
 
 
 ;;; $9F00: Samus top tiles - set 3 - entry 3 ;;;
@@ -579,7 +579,7 @@ SamusTiles_Top_Set3_Entry3:
 ; 61h: Unused - frame 35h
 ; B2h: Facing clockwise     - grapple swinging - frame 15h
 ; B2h: Facing clockwise     - grapple swinging - frame 35h
-incbin "../data/SamusTiles_Top_Set3_Entry3.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry3.bin" ; $180 bytes
 
 
 ;;; $A080: Samus top tiles - set 3 - entry 4 ;;;
@@ -596,7 +596,7 @@ SamusTiles_Top_Set3_Entry4:
 ; 61h: Unused - frame 34h
 ; B2h: Facing clockwise     - grapple swinging - frame 14h
 ; B2h: Facing clockwise     - grapple swinging - frame 34h
-incbin "../data/SamusTiles_Top_Set3_Entry4.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry4.bin" ; $180 bytes
 
 
 ;;; $A200: Samus top tiles - set 3 - entry 5 ;;;
@@ -613,7 +613,7 @@ SamusTiles_Top_Set3_Entry5:
 ; 61h: Unused - frame 33h
 ; B2h: Facing clockwise     - grapple swinging - frame 13h
 ; B2h: Facing clockwise     - grapple swinging - frame 33h
-incbin "../data/SamusTiles_Top_Set3_Entry5.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry5.bin" ; $180 bytes
 
 
 ;;; $A380: Samus top tiles - set 3 - entry 6 ;;;
@@ -630,7 +630,7 @@ SamusTiles_Top_Set3_Entry6:
 ; 61h: Unused - frame 32h
 ; B2h: Facing clockwise     - grapple swinging - frame 12h
 ; B2h: Facing clockwise     - grapple swinging - frame 32h
-incbin "../data/SamusTiles_Top_Set3_Entry6.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry6.bin" ; $180 bytes
 
 
 ;;; $A500: Samus top tiles - set 3 - entry 7 ;;;
@@ -647,7 +647,7 @@ SamusTiles_Top_Set3_Entry7:
 ; 61h: Unused - frame 31h
 ; B2h: Facing clockwise     - grapple swinging - frame 11h
 ; B2h: Facing clockwise     - grapple swinging - frame 31h
-incbin "../data/SamusTiles_Top_Set3_Entry7.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry7.bin" ; $140 bytes
 
 
 ;;; $A640: Samus top tiles - set 3 - entry 8 ;;;
@@ -670,7 +670,7 @@ SamusTiles_Top_Set3_Entry8:
 ; B2h: Facing clockwise     - grapple swinging - frame 10h
 ; B2h: Facing clockwise     - grapple swinging - frame 30h
 ; B2h: Facing clockwise     - grapple swinging - frames 40h..41h
-incbin "../data/SamusTiles_Top_Set3_Entry8.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry8.bin" ; $140 bytes
 
 
 ;;; $A780: Samus top tiles - set 3 - entry 9 ;;;
@@ -687,7 +687,7 @@ SamusTiles_Top_Set3_Entry9:
 ; 61h: Unused - frame 2Fh
 ; B2h: Facing clockwise     - grapple swinging - frame Fh
 ; B2h: Facing clockwise     - grapple swinging - frame 2Fh
-incbin "../data/SamusTiles_Top_Set3_Entry9.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry9.bin" ; $140 bytes
 
 
 ;;; $A8C0: Samus top tiles - set 3 - entry Ah ;;;
@@ -704,7 +704,7 @@ SamusTiles_Top_Set3_EntryA:
 ; 61h: Unused - frame 2Eh
 ; B2h: Facing clockwise     - grapple swinging - frame Eh
 ; B2h: Facing clockwise     - grapple swinging - frame 2Eh
-incbin "../data/SamusTiles_Top_Set3_EntryA.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_EntryA.bin" ; $180 bytes
 
 
 ;;; $AA40: Samus top tiles - set 3 - entry Bh ;;;
@@ -721,7 +721,7 @@ SamusTiles_Top_Set3_EntryB:
 ; 61h: Unused - frame 2Dh
 ; B2h: Facing clockwise     - grapple swinging - frame Dh
 ; B2h: Facing clockwise     - grapple swinging - frame 2Dh
-incbin "../data/SamusTiles_Top_Set3_EntryB.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_EntryB.bin" ; $180 bytes
 
 
 ;;; $ABC0: Samus top tiles - set 3 - entry Ch ;;;
@@ -738,7 +738,7 @@ SamusTiles_Top_Set3_EntryC:
 ; 61h: Unused - frame 2Ch
 ; B2h: Facing clockwise     - grapple swinging - frame Ch
 ; B2h: Facing clockwise     - grapple swinging - frame 2Ch
-incbin "../data/SamusTiles_Top_Set3_EntryC.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_EntryC.bin" ; $180 bytes
 
 
 ;;; $AD40: Samus top tiles - set 3 - entry Dh ;;;
@@ -755,7 +755,7 @@ SamusTiles_Top_Set3_EntryD:
 ; 61h: Unused - frame 2Bh
 ; B2h: Facing clockwise     - grapple swinging - frame Bh
 ; B2h: Facing clockwise     - grapple swinging - frame 2Bh
-incbin "../data/SamusTiles_Top_Set3_EntryD.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_EntryD.bin" ; $180 bytes
 
 
 ;;; $AEC0: Samus top tiles - set 3 - entry Eh ;;;
@@ -772,7 +772,7 @@ SamusTiles_Top_Set3_EntryE:
 ; 61h: Unused - frame 2Ah
 ; B2h: Facing clockwise     - grapple swinging - frame Ah
 ; B2h: Facing clockwise     - grapple swinging - frame 2Ah
-incbin "../data/SamusTiles_Top_Set3_EntryE.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set3_EntryE.bin" ; $180 bytes
 
 
 ;;; $B040: Samus top tiles - set 3 - entry Fh ;;;
@@ -789,13 +789,13 @@ SamusTiles_Top_Set3_EntryF:
 ; 61h: Unused - frame 29h
 ; B2h: Facing clockwise     - grapple swinging - frame 9
 ; B2h: Facing clockwise     - grapple swinging - frame 29h
-incbin "../data/SamusTiles_Top_Set3_EntryF.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set3_EntryF.bin" ; $140 bytes
 
 
 ;;; $B180: Samus top tiles - set 3 - entry 10h ;;;
 SamusTiles_Top_Set3_Entry10:
 ; Unused
-incbin "../data/SamusTiles_Top_Set3_Entry10.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set3_Entry10.bin" ; $140 bytes
 
 
 ;;; $B2C0..D2BF: Samus top tiles - set 4 (facing anticlockwise - grappling - in air - upside up) ;;;
@@ -804,7 +804,7 @@ SamusTiles_Top_Set4_Entry0:
 ; 62h: Unused - frame 28h
 ; B3h: Facing anticlockwise - grapple swinging - frame 8
 ; B3h: Facing anticlockwise - grapple swinging - frame 28h
-incbin "../data/SamusTiles_Top_Set4_Entry0.bin" ; $1C0 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry0.bin" ; $1C0 bytes
 
 
 ;;; $B480: Samus top tiles - set 4 - entry 1 ;;;
@@ -813,7 +813,7 @@ SamusTiles_Top_Set4_Entry1:
 ; 62h: Unused - frame 29h
 ; B3h: Facing anticlockwise - grapple swinging - frame 9
 ; B3h: Facing anticlockwise - grapple swinging - frame 29h
-incbin "../data/SamusTiles_Top_Set4_Entry1.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry1.bin" ; $140 bytes
 
 
 ;;; $B640: Samus top tiles - set 4 - entry 2 ;;;
@@ -822,7 +822,7 @@ SamusTiles_Top_Set4_Entry2:
 ; 62h: Unused - frame 2Ah
 ; B3h: Facing anticlockwise - grapple swinging - frame Ah
 ; B3h: Facing anticlockwise - grapple swinging - frame 2Ah
-incbin "../data/SamusTiles_Top_Set4_Entry2.bin" ; $180 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry2.bin" ; $180 bytes
 
 
 ;;; $B840: Samus top tiles - set 4 - entry 3 ;;;
@@ -831,7 +831,7 @@ SamusTiles_Top_Set4_Entry3:
 ; 62h: Unused - frame 2Bh
 ; B3h: Facing anticlockwise - grapple swinging - frame Bh
 ; B3h: Facing anticlockwise - grapple swinging - frame 2Bh
-incbin "../data/SamusTiles_Top_Set4_Entry3.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry3.bin" ; $200 bytes
 
 
 ;;; $BA40: Samus top tiles - set 4 - entry 4 ;;;
@@ -840,7 +840,7 @@ SamusTiles_Top_Set4_Entry4:
 ; 62h: Unused - frame 2Ch
 ; B3h: Facing anticlockwise - grapple swinging - frame Ch
 ; B3h: Facing anticlockwise - grapple swinging - frame 2Ch
-incbin "../data/SamusTiles_Top_Set4_Entry4.bin" ; $1E0 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry4.bin" ; $1E0 bytes
 
 
 ;;; $BC20: Samus top tiles - set 4 - entry 5 ;;;
@@ -849,7 +849,7 @@ SamusTiles_Top_Set4_Entry5:
 ; 62h: Unused - frame 2Dh
 ; B3h: Facing anticlockwise - grapple swinging - frame Dh
 ; B3h: Facing anticlockwise - grapple swinging - frame 2Dh
-incbin "../data/SamusTiles_Top_Set4_Entry5.bin" ; $1E0 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry5.bin" ; $1E0 bytes
 
 
 ;;; $BE00: Samus top tiles - set 4 - entry 6 ;;;
@@ -858,7 +858,7 @@ SamusTiles_Top_Set4_Entry6:
 ; 62h: Unused - frame 2Eh
 ; B3h: Facing anticlockwise - grapple swinging - frame Eh
 ; B3h: Facing anticlockwise - grapple swinging - frame 2Eh
-incbin "../data/SamusTiles_Top_Set4_Entry6.bin" ; $1E0 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry6.bin" ; $1E0 bytes
 
 
 ;;; $BFE0: Samus top tiles - set 4 - entry 7 ;;;
@@ -867,7 +867,7 @@ SamusTiles_Top_Set4_Entry7:
 ; 62h: Unused - frame 2Fh
 ; B3h: Facing anticlockwise - grapple swinging - frame Fh
 ; B3h: Facing anticlockwise - grapple swinging - frame 2Fh
-incbin "../data/SamusTiles_Top_Set4_Entry7.bin" ; $1C0 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry7.bin" ; $1C0 bytes
 
 
 ;;; $C1A0: Samus top tiles - set 4 - entry 8 ;;;
@@ -878,7 +878,7 @@ SamusTiles_Top_Set4_Entry8:
 ; B3h: Facing anticlockwise - grapple swinging - frame 10h
 ; B3h: Facing anticlockwise - grapple swinging - frame 30h
 ; B3h: Facing anticlockwise - grapple swinging - frames 40h..41h
-incbin "../data/SamusTiles_Top_Set4_Entry8.bin" ; $1C0 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry8.bin" ; $1C0 bytes
 
 
 ;;; $C360: Samus top tiles - set 4 - entry 9 ;;;
@@ -887,7 +887,7 @@ SamusTiles_Top_Set4_Entry9:
 ; 62h: Unused - frame 31h
 ; B3h: Facing anticlockwise - grapple swinging - frame 11h
 ; B3h: Facing anticlockwise - grapple swinging - frame 31h
-incbin "../data/SamusTiles_Top_Set4_Entry9.bin" ; $1C0 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry9.bin" ; $1C0 bytes
 
 
 ;;; $C520: Samus top tiles - set 4 - entry Ah ;;;
@@ -896,7 +896,7 @@ SamusTiles_Top_Set4_EntryA:
 ; 62h: Unused - frame 32h
 ; B3h: Facing anticlockwise - grapple swinging - frame 12h
 ; B3h: Facing anticlockwise - grapple swinging - frame 32h
-incbin "../data/SamusTiles_Top_Set4_EntryA.bin" ; $1E0 bytes
+incbin "../data/samus_gfx/Top_Set4_EntryA.bin" ; $1E0 bytes
 
 
 ;;; $C700: Samus top tiles - set 4 - entry Bh ;;;
@@ -905,7 +905,7 @@ SamusTiles_Top_Set4_EntryB:
 ; 62h: Unused - frame 33h
 ; B3h: Facing anticlockwise - grapple swinging - frame 13h
 ; B3h: Facing anticlockwise - grapple swinging - frame 33h
-incbin "../data/SamusTiles_Top_Set4_EntryB.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_Set4_EntryB.bin" ; $200 bytes
 
 
 ;;; $C900: Samus top tiles - set 4 - entry Ch ;;;
@@ -914,7 +914,7 @@ SamusTiles_Top_Set4_EntryC:
 ; 62h: Unused - frame 34h
 ; B3h: Facing anticlockwise - grapple swinging - frame 14h
 ; B3h: Facing anticlockwise - grapple swinging - frame 34h
-incbin "../data/SamusTiles_Top_Set4_EntryC.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_Set4_EntryC.bin" ; $200 bytes
 
 
 ;;; $CB00: Samus top tiles - set 4 - entry Dh ;;;
@@ -923,7 +923,7 @@ SamusTiles_Top_Set4_EntryD:
 ; 62h: Unused - frame 35h
 ; B3h: Facing anticlockwise - grapple swinging - frame 15h
 ; B3h: Facing anticlockwise - grapple swinging - frame 35h
-incbin "../data/SamusTiles_Top_Set4_EntryD.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_Set4_EntryD.bin" ; $200 bytes
 
 
 ;;; $CD00: Samus top tiles - set 4 - entry Eh ;;;
@@ -932,7 +932,7 @@ SamusTiles_Top_Set4_EntryE:
 ; 62h: Unused - frame 36h
 ; B3h: Facing anticlockwise - grapple swinging - frame 16h
 ; B3h: Facing anticlockwise - grapple swinging - frame 36h
-incbin "../data/SamusTiles_Top_Set4_EntryE.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_Set4_EntryE.bin" ; $200 bytes
 
 
 ;;; $CF00: Samus top tiles - set 4 - entry Fh ;;;
@@ -941,13 +941,13 @@ SamusTiles_Top_Set4_EntryF:
 ; 62h: Unused - frame 37h
 ; B3h: Facing anticlockwise - grapple swinging - frame 17h
 ; B3h: Facing anticlockwise - grapple swinging - frame 37h
-incbin "../data/SamusTiles_Top_Set4_EntryF.bin" ; $200 bytes
+incbin "../data/samus_gfx/Top_Set4_EntryF.bin" ; $200 bytes
 
 
 ;;; $D0E0: Samus top tiles - set 4 - entry 10h ;;;
 SamusTiles_Top_Set4_Entry10:
 ; Unused
-incbin "../data/SamusTiles_Top_Set4_Entry10.bin" ; $1E0 bytes
+incbin "../data/samus_gfx/Top_Set4_Entry10.bin" ; $1E0 bytes
 
 
 ;;; $D2C0: Samus top tiles - set 7 - entry 0 ;;;
@@ -955,7 +955,7 @@ SamusTiles_Top_Set7_Entry0:
 ; E9h: Facing left  - Samus drained - crouching/falling - frame 8
 ; E9h: Facing left  - Samus drained - crouching/falling - frame 1Ah
 ; E9h: Facing left  - Samus drained - crouching/falling - frame 1Dh
-incbin "../data/SamusTiles_Top_Set7_Entry0.bin" ; $120 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry0.bin" ; $120 bytes
 
 
 ;;; $D3E0: Samus top tiles - set 7 - entry 1 ;;;
@@ -966,38 +966,38 @@ SamusTiles_Top_Set7_Entry1:
 ; E9h: Facing left  - Samus drained - crouching/falling - frame Eh
 ; E9h: Facing left  - Samus drained - crouching/falling - frame 13h
 ; E9h: Facing left  - Samus drained - crouching/falling - frame 17h
-incbin "../data/SamusTiles_Top_Set7_Entry1.bin" ; $120 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry1.bin" ; $120 bytes
 
 
 ;;; $D500: Samus top tiles - set 7 - entry 2 ;;;
 SamusTiles_Top_Set7_Entry2:
 ; E9h: Facing left  - Samus drained - crouching/falling - frame Ah
-incbin "../data/SamusTiles_Top_Set7_Entry2.bin" ; $120 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry2.bin" ; $120 bytes
 
 
 ;;; $D620: Samus top tiles - set 7 - entry 3 ;;;
 SamusTiles_Top_Set7_Entry3:
 ; E8h: Facing right - Samus drained - crouching/falling - frame 8
-incbin "../data/SamusTiles_Top_Set7_Entry3.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry3.bin" ; $140 bytes
 
 
 ;;; $D760: Samus top tiles - set 7 - entry 4 ;;;
 SamusTiles_Top_Set7_Entry4:
 ; E8h: Facing right - Samus drained - crouching/falling - frame 9
 ; E8h: Facing right - Samus drained - crouching/falling - frame Bh
-incbin "../data/SamusTiles_Top_Set7_Entry4.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry4.bin" ; $140 bytes
 
 
 ;;; $D8A0: Samus top tiles - set 7 - entry 5 ;;;
 SamusTiles_Top_Set7_Entry5:
 ; E8h: Facing right - Samus drained - crouching/falling - frame Ah
-incbin "../data/SamusTiles_Top_Set7_Entry5.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry5.bin" ; $140 bytes
 
 
 ;;; $D9E0: Samus top tiles - set 7 - entry 6 ;;;
 SamusTiles_Top_Set7_Entry6:
 ; EBh: Facing left  - Samus drained - standing - frame 0
-incbin "../data/SamusTiles_Top_Set7_Entry6.bin" ; $120 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry6.bin" ; $120 bytes
 
 
 ;;; $DB00: Samus top tiles - set 7 - entry 7 ;;;
@@ -1007,32 +1007,32 @@ SamusTiles_Top_Set7_Entry7:
 ; E9h: Facing left  - Samus drained - crouching/falling - frame 16h
 ; EBh: Facing left  - Samus drained - standing - frame 1
 ; EBh: Facing left  - Samus drained - standing - frame 3
-incbin "../data/SamusTiles_Top_Set7_Entry7.bin" ; $120 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry7.bin" ; $120 bytes
 
 
 ;;; $DC20: Samus top tiles - set 7 - entry 8 ;;;
 SamusTiles_Top_Set7_Entry8:
 ; EBh: Facing left  - Samus drained - standing - frame 2
-incbin "../data/SamusTiles_Top_Set7_Entry8.bin" ; $120 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry8.bin" ; $120 bytes
 
 
 ;;; $DD40: Samus top tiles - set 7 - entry 9 ;;;
 SamusTiles_Top_Set7_Entry9:
 ; EAh: Facing right - Samus drained - standing - frame 0
-incbin "../data/SamusTiles_Top_Set7_Entry9.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry9.bin" ; $140 bytes
 
 
 ;;; $DE80: Samus top tiles - set 7 - entry Ah ;;;
 SamusTiles_Top_Set7_EntryA:
 ; EAh: Facing right - Samus drained - standing - frame 1
 ; EAh: Facing right - Samus drained - standing - frame 3
-incbin "../data/SamusTiles_Top_Set7_EntryA.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_EntryA.bin" ; $140 bytes
 
 
 ;;; $DFC0: Samus top tiles - set 7 - entry Bh ;;;
 SamusTiles_Top_Set7_EntryB:
 ; EAh: Facing right - Samus drained - standing - frame 2
-incbin "../data/SamusTiles_Top_Set7_EntryB.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_EntryB.bin" ; $140 bytes
 
 
 ;;; $E100: Samus top tiles - set 7 - entry Ch ;;;
@@ -1049,7 +1049,7 @@ SamusTiles_Top_Set7_EntryC:
 ; A8h: Facing right - grappling - frame 5
 ; B4h: Facing right - grappling - crouching - frame 0
 ; B4h: Facing right - grappling - crouching - frame 5
-incbin "../data/SamusTiles_Top_Set7_EntryC.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_EntryC.bin" ; $140 bytes
 
 
 ;;; $E240: Samus top tiles - set 7 - entry Dh ;;;
@@ -1078,7 +1078,7 @@ SamusTiles_Top_Set7_EntryD:
 ; B4h: Facing right - grappling - crouching - frame 3
 ; B4h: Facing right - grappling - crouching - frame 6
 ; B4h: Facing right - grappling - crouching - frame 8
-incbin "../data/SamusTiles_Top_Set7_EntryD.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_EntryD.bin" ; $140 bytes
 
 
 ;;; $E380: Samus top tiles - set 7 - entry Eh ;;;
@@ -1089,7 +1089,7 @@ SamusTiles_Top_Set7_EntryE:
 ; 89h: Facing right - ran into a wall - frame 2
 ; A8h: Facing right - grappling - frame 2
 ; B4h: Facing right - grappling - crouching - frame 2
-incbin "../data/SamusTiles_Top_Set7_EntryE.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_EntryE.bin" ; $140 bytes
 
 
 ;;; $E4C0: Samus top tiles - set 7 - entry Fh ;;;
@@ -1106,7 +1106,7 @@ SamusTiles_Top_Set7_EntryF:
 ; A9h: Facing left  - grappling - frame 5
 ; B5h: Facing left  - grappling - crouching - frame 0
 ; B5h: Facing left  - grappling - crouching - frame 5
-incbin "../data/SamusTiles_Top_Set7_EntryF.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_EntryF.bin" ; $140 bytes
 
 
 ;;; $E600: Samus top tiles - set 7 - entry 10h ;;;
@@ -1135,7 +1135,7 @@ SamusTiles_Top_Set7_Entry10:
 ; B5h: Facing left  - grappling - crouching - frame 3
 ; B5h: Facing left  - grappling - crouching - frame 6
 ; B5h: Facing left  - grappling - crouching - frame 8
-incbin "../data/SamusTiles_Top_Set7_Entry10.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry10.bin" ; $140 bytes
 
 
 ;;; $E740: Samus top tiles - set 7 - entry 11h ;;;
@@ -1146,7 +1146,7 @@ SamusTiles_Top_Set7_Entry11:
 ; 8Ah: Facing left  - ran into a wall - frame 2
 ; A9h: Facing left  - grappling - frame 2
 ; B5h: Facing left  - grappling - crouching - frame 2
-incbin "../data/SamusTiles_Top_Set7_Entry11.bin" ; $140 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry11.bin" ; $140 bytes
 
 
 ;;; $E880: Samus top tiles - set 7 - entry 12h ;;;
@@ -1157,7 +1157,7 @@ SamusTiles_Top_Set7_Entry12:
 ; 89h: Facing right - ran into a wall - frame 7
 ; A8h: Facing right - grappling - frame 7
 ; B4h: Facing right - grappling - crouching - frame 7
-incbin "../data/SamusTiles_Top_Set7_Entry12.bin" ; $100 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry12.bin" ; $100 bytes
 
 
 ;;; $E980: Samus top tiles - set 7 - entry 13h ;;;
@@ -1168,7 +1168,7 @@ SamusTiles_Top_Set7_Entry13:
 ; 8Ah: Facing left  - ran into a wall - frame 7
 ; A9h: Facing left  - grappling - frame 7
 ; B5h: Facing left  - grappling - crouching - frame 7
-incbin "../data/SamusTiles_Top_Set7_Entry13.bin" ; $100 bytes
+incbin "../data/samus_gfx/Top_Set7_Entry13.bin" ; $100 bytes
 
 
 ;;; $EA80: Samus bottom tiles - set 9 - entry 0 ;;;
@@ -1189,7 +1189,7 @@ SamusTiles_Bottom_Set9_Entry0:
 ; 84h: Facing left  - wall jump - frame 17h
 ; 84h: Facing left  - wall jump - frame 1Fh
 ; 84h: Facing left  - wall jump - frame 27h
-incbin "../data/SamusTiles_Bottom_Set9_Entry0.bin" ; $200 bytes
+incbin "../data/samus_gfx/Bottom_Set9_Entry0.bin" ; $200 bytes
 
 
 ;;; $EC80: Samus bottom tiles - set 9 - entry 1 ;;;
@@ -1210,7 +1210,7 @@ SamusTiles_Bottom_Set9_Entry1:
 ; 84h: Facing left  - wall jump - frame 18h
 ; 84h: Facing left  - wall jump - frame 20h
 ; 84h: Facing left  - wall jump - frame 28h
-incbin "../data/SamusTiles_Bottom_Set9_Entry1.bin" ; $200 bytes
+incbin "../data/samus_gfx/Bottom_Set9_Entry1.bin" ; $200 bytes
 
 
 ;;; $EE80: Samus bottom tiles - set 9 - entry 2 ;;;
@@ -1231,7 +1231,7 @@ SamusTiles_Bottom_Set9_Entry2:
 ; 84h: Facing left  - wall jump - frame 19h
 ; 84h: Facing left  - wall jump - frame 21h
 ; 84h: Facing left  - wall jump - frame 29h
-incbin "../data/SamusTiles_Bottom_Set9_Entry2.bin" ; $200 bytes
+incbin "../data/samus_gfx/Bottom_Set9_Entry2.bin" ; $200 bytes
 
 
 ;;; $F080: Samus bottom tiles - set 9 - entry 3 ;;;
@@ -1252,7 +1252,7 @@ SamusTiles_Bottom_Set9_Entry3:
 ; 84h: Facing left  - wall jump - frame 1Ah
 ; 84h: Facing left  - wall jump - frame 22h
 ; 84h: Facing left  - wall jump - frame 2Ah
-incbin "../data/SamusTiles_Bottom_Set9_Entry3.bin" ; $200 bytes
+incbin "../data/samus_gfx/Bottom_Set9_Entry3.bin" ; $200 bytes
 
 
 ;;; $F280: Samus bottom tiles - set 9 - entry 4 ;;;
@@ -1273,7 +1273,7 @@ SamusTiles_Bottom_Set9_Entry4:
 ; 84h: Facing left  - wall jump - frame 1Bh
 ; 84h: Facing left  - wall jump - frame 23h
 ; 84h: Facing left  - wall jump - frame 2Bh
-incbin "../data/SamusTiles_Bottom_Set9_Entry4.bin" ; $200 bytes
+incbin "../data/samus_gfx/Bottom_Set9_Entry4.bin" ; $200 bytes
 
 
 ;;; $F480: Samus bottom tiles - set 9 - entry 5 ;;;
@@ -1294,7 +1294,7 @@ SamusTiles_Bottom_Set9_Entry5:
 ; 84h: Facing left  - wall jump - frame 1Ch
 ; 84h: Facing left  - wall jump - frame 24h
 ; 84h: Facing left  - wall jump - frame 2Ch
-incbin "../data/SamusTiles_Bottom_Set9_Entry5.bin" ; $200 bytes
+incbin "../data/samus_gfx/Bottom_Set9_Entry5.bin" ; $200 bytes
 
 
 ;;; $F680: Samus bottom tiles - set 9 - entry 6 ;;;
@@ -1315,7 +1315,7 @@ SamusTiles_Bottom_Set9_Entry6:
 ; 84h: Facing left  - wall jump - frame 1Dh
 ; 84h: Facing left  - wall jump - frame 25h
 ; 84h: Facing left  - wall jump - frame 2Dh
-incbin "../data/SamusTiles_Bottom_Set9_Entry6.bin" ; $200 bytes
+incbin "../data/samus_gfx/Bottom_Set9_Entry6.bin" ; $200 bytes
 
 
 ;;; $F880: Samus bottom tiles - set 9 - entry 7 ;;;
@@ -1336,7 +1336,7 @@ SamusTiles_Bottom_Set9_Entry7:
 ; 84h: Facing left  - wall jump - frame 1Eh
 ; 84h: Facing left  - wall jump - frame 26h
 ; 84h: Facing left  - wall jump - frame 2Eh
-incbin "../data/SamusTiles_Bottom_Set9_Entry7.bin" ; $200 bytes
+incbin "../data/samus_gfx/Bottom_Set9_Entry7.bin" ; $200 bytes
 
 
 Freespace_Bank9C_FA80:                                                   ;9CFA80;

@@ -3136,7 +3136,7 @@ AreaMapPointers:
     dl MapTilemaps_wreckedShip                                           ;829653;
     dl MapTilemaps_maridia                                               ;829656;
     dl MapTilemaps_tourian                                               ;829659;
-    dl UNUSED_MapTilemaps_ceres_B5E000                                   ;82965C;
+    dl MapTilemaps_ceres                                   ;82965C;
 
 
 ;;; $965F: Area label tilemaps ;;;

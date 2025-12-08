@@ -6,87 +6,87 @@ org $898000
 
 ;;; $8000: Item PLM graphics - bombs ;;;
 ItemPLMGFX_Bombs:
-incbin "../data/ItemPLMGraphics_Bombs.bin" ; $100 bytes
+incbin "../data/item_gfx/Bombs.bin" ; $100 bytes
 
 
 ;;; $8100: Item PLM graphics - gravity suit ;;;
 ItemPLMGFX_GravitySuit:
-incbin "../data/ItemPLMGraphics_GravitySuit.bin" ; $100 bytes
+incbin "../data/item_gfx/GravitySuit.bin" ; $100 bytes
 
 
 ;;; $8200: Item PLM graphics - spring ball ;;;
 ItemPLMGFX_SpringBall:
-incbin "../data/ItemPLMGraphics_SpringBall.bin" ; $100 bytes
+incbin "../data/item_gfx/SpringBall.bin" ; $100 bytes
 
 
 ;;; $8300: Item PLM graphics - varia suit ;;;
 ItemPLMGFX_VariaSuit:
-incbin "../data/ItemPLMGraphics_VariaSuit.bin" ; $100 bytes
+incbin "../data/item_gfx/VariaSuit.bin" ; $100 bytes
 
 
 ;;; $8400: Item PLM graphics - hi-jump ;;;
 ItemPLMGFX_HiJumpBoots:
-incbin "../data/ItemPLMGraphics_HiJumpBoots.bin" ; $100 bytes
+incbin "../data/item_gfx/HiJumpBoots.bin" ; $100 bytes
 
 
 ;;; $8500: Item PLM graphics - screw attack ;;;
 ItemPLMGFX_ScrewAttack:
-incbin "../data/ItemPLMGraphics_ScrewAttack.bin" ; $100 bytes
+incbin "../data/item_gfx/ScrewAttack.bin" ; $100 bytes
 
 
 ;;; $8600: Item PLM graphics - space jump ;;;
 ItemPLMGFX_SpaceJump:
-incbin "../data/ItemPLMGraphics_SpaceJump.bin" ; $100 bytes
+incbin "../data/item_gfx/SpaceJump.bin" ; $100 bytes
 
 
 ;;; $8700: Item PLM graphics - morph ball ;;;
 ItemPLMGFX_MorphBall:
-incbin "../data/ItemPLMGraphics_MorphBall.bin" ; $100 bytes
+incbin "../data/item_gfx/MorphBall.bin" ; $100 bytes
 
 
 ;;; $8800: Item PLM graphics - grapple beam ;;;
 ItemPLMGFX_GrappleBeam:
-incbin "../data/ItemPLMGraphics_GrappleBeam.bin" ; $100 bytes
+incbin "../data/item_gfx/GrappleBeam.bin" ; $100 bytes
 
 
 ;;; $8900: Item PLM graphics - x-ray scope ;;;
 ItemPLMGFX_XrayScope:
-incbin "../data/ItemPLMGraphics_XrayScope.bin" ; $100 bytes
+incbin "../data/item_gfx/XrayScope.bin" ; $100 bytes
 
 
 ;;; $8A00: Item PLM graphics - speed booster ;;;
 ItemPLMGFX_SpeedBooster:
-incbin "../data/ItemPLMGraphics_SpeedBooster.bin" ; $100 bytes
+incbin "../data/item_gfx/SpeedBooster.bin" ; $100 bytes
 
 
 ;;; $8B00: Item PLM graphics - charge beam ;;;
 ItemPLMGFX_ChargeBeam:
-incbin "../data/ItemPLMGraphics_ChargeBeam.bin" ; $100 bytes
+incbin "../data/item_gfx/ChargeBeam.bin" ; $100 bytes
 
 
 ;;; $8C00: Item PLM graphics - ice beam ;;;
 ItemPLMGFX_IceBeam:
-incbin "../data/ItemPLMGraphics_IceBeam.bin" ; $100 bytes
+incbin "../data/item_gfx/IceBeam.bin" ; $100 bytes
 
 
 ;;; $8D00: Item PLM graphics - wave beam ;;;
 ItemPLMGFX_WaveBeam:
-incbin "../data/ItemPLMGraphics_WaveBeam.bin" ; $100 bytes
+incbin "../data/item_gfx/WaveBeam.bin" ; $100 bytes
 
 
 ;;; $8E00: Item PLM graphics - plasma beam ;;;
 ItemPLMGFX_PlasmaBeam:
-incbin "../data/ItemPLMGraphics_PlasmaBeam.bin" ; $100 bytes
+incbin "../data/item_gfx/PlasmaBeam.bin" ; $100 bytes
 
 
 ;;; $8F00: Item PLM graphics - spazer beam ;;;
 ItemPLMGFX_Spazer:
-incbin "../data/ItemPLMGraphics_Spazer.bin" ; $100 bytes
+incbin "../data/item_gfx/Spazer.bin" ; $100 bytes
 
 
 ;;; $9000: Item PLM graphics - reserve tank ;;;
 ItemPLMGFX_ReserveTank:
-incbin "../data/ItemPLMGraphics_ReserveTank.bin" ; $100 bytes
+incbin "../data/item_gfx/ReserveTank.bin" ; $100 bytes
 
 
 ;;; $9100: Zeros ;;;
