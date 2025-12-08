@@ -2192,7 +2192,7 @@ EnemyShot_KraidArm:
     TYX                                                                  ;A794B6;
     JSR.W SpawnExplosionProjectile                                       ;A794B7;
     LDA.W SamusProjectile_Directions,Y                                   ;A794BA;
-    ORA.W #$0010                                                         ;A794BD;
+    ORA.W #PROJ_PROP_DELETE                                              ;A794BD;
     STA.W SamusProjectile_Directions,Y                                   ;A794C0;
     RTL                                                                  ;A794C3;
 
@@ -4078,7 +4078,7 @@ KraidsMouth_vs_Projectile_CollisionHandling:
     PLP                                                                  ;A7B03E;
     PLX                                                                  ;A7B03F;
     LDA.W SamusProjectile_Directions,X                                   ;A7B040;
-    ORA.W #$0010                                                         ;A7B043;
+    ORA.W #PROJ_PROP_DELETE                                              ;A7B043;
     STA.W SamusProjectile_Directions,X                                   ;A7B046;
     LDY.W #$0001                                                         ;A7B049;
 
@@ -4308,7 +4308,7 @@ KraidBody_vs_Projectile_CollisionHandling:
   .hit:
     JSR.W SpawnExplosionProjectile                                       ;A7B1EC;
     LDA.W SamusProjectile_Directions,X                                   ;A7B1EF;
-    ORA.W #$0010                                                         ;A7B1F2;
+    ORA.W #PROJ_PROP_DELETE                                              ;A7B1F2;
     STA.W SamusProjectile_Directions,X                                   ;A7B1F5;
     LDA.W SamusProjectile_Types,X                                        ;A7B1F8;
     BIT.W #$0010                                                         ;A7B1FB;

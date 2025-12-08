@@ -790,20 +790,20 @@ EnemyShot_SpacePirate_GoldNinjaIsInvincible:
     LDA.W #$000A                                                         ;B2886C;
     STA.W Enemy.invincibilityTimer,X                                     ;B2886F;
     LDA.W SamusProjectile_Directions,Y                                   ;B28872;
-    AND.W #$000F                                                         ;B28875;
-    CMP.W #$0007                                                         ;B28878;
+    AND.W #DIR_BITMASK                                                   ;B28875;
+    CMP.W #DIR_LEFT                                                      ;B28878;
     BNE .notLeft                                                         ;B2887B;
-    LDA.W #$0001                                                         ;B2887D;
+    LDA.W #DIR_UP_RIGHT                                                  ;B2887D;
     BRA .merge                                                           ;B28880;
 
   .notLeft:
-    CMP.W #$0002                                                         ;B28882;
+    CMP.W #DIR_RIGHT                                                     ;B28882;
     BNE .downFacingLeft                                                  ;B28885;
-    LDA.W #$0008                                                         ;B28887;
+    LDA.W #DIR_UP_LEFT                                                   ;B28887;
     BRA .merge                                                           ;B2888A;
 
   .downFacingLeft:
-    LDA.W #$0005                                                         ;B2888C;
+    LDA.W #DIR_DOWN_FACING_LEFT                                          ;B2888C;
 
   .merge:
     STA.W SamusProjectile_Directions,Y                                   ;B2888F;

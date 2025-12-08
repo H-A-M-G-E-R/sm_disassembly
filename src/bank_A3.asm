@@ -7334,7 +7334,7 @@ EnemyShot_Bang:
     ASL                                                                  ;A3BF0B;
     TAY                                                                  ;A3BF0C;
     LDA.W SamusProjectile_Directions,Y                                   ;A3BF0D;
-    AND.W #$000F                                                         ;A3BF10;
+    AND.W #DIR_BITMASK                                                   ;A3BF10;
     ASL                                                                  ;A3BF13;
     TAY                                                                  ;A3BF14;
     LDA.W BangAngles,Y                                                   ;A3BF15;
@@ -7368,7 +7368,7 @@ EnemyShot_Bang:
     ADC.W Bang.damage,X                                                  ;A3BF5A;
     STA.W Bang.damage,X                                                  ;A3BF5D;
     LDA.W SamusProjectile_Directions,Y                                   ;A3BF60;
-    ORA.W #$0010                                                         ;A3BF63;
+    ORA.W #PROJ_PROP_DELETE                                              ;A3BF63;
     STA.W SamusProjectile_Directions,Y                                   ;A3BF66;
     LDX.W EnemyIndex                                                     ;A3BF69;
     LDA.L Bang.newInstListIndex,X                                        ;A3BF6C;
@@ -10958,7 +10958,7 @@ EnemyShot_Reflec:
     ASL                                                                  ;A3DC31;
     STA.W Temp_Unknown0E32                                               ;A3DC32;
     LDA.W SamusProjectile_Directions,Y                                   ;A3DC35;
-    AND.W #$000F                                                         ;A3DC38;
+    AND.W #DIR_BITMASK                                                   ;A3DC38;
     ASL                                                                  ;A3DC3B;
     CLC                                                                  ;A3DC3C;
     ADC.W Temp_Unknown0E32                                               ;A3DC3D;
@@ -10990,7 +10990,7 @@ EnemyShot_Reflec:
     RTL                                                                  ;A3DC79;
 
 +   LDA.W SamusProjectile_Directions,Y                                   ;A3DC7A;
-    ORA.W #$0010                                                         ;A3DC7D;
+    ORA.W #PROJ_PROP_DELETE                                              ;A3DC7D;
     STA.W SamusProjectile_Directions,Y                                   ;A3DC80;
     LDA.W Enemy.health,X                                                 ;A3DC83;
     BEQ .return                                                          ;A3DC86;

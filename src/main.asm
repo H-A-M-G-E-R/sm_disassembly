@@ -88,5 +88,6 @@ incsrc bank_CF..DE.asm ; SPC engine
 incsrc bank_DF.asm ; Unused music track
 incsrc labels.asm ; Labels that don't point directly to ROM/RAM
 incsrc memory.asm ; Memory labels
+incsrc constants.asm ; Constant labels
 
 print "Assembly complete. Total bytes written: ", bytes

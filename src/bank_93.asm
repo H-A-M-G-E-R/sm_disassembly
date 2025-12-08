@@ -16,7 +16,7 @@ InitializeProjectile:
     PLB                                                                  ;938003;
     REP #$30                                                             ;938004;
     LDA.W SamusProjectile_Directions,X                                   ;938006;
-    AND.W #$000F                                                         ;938009;
+    AND.W #DIR_BITMASK                                                   ;938009;
     ASL                                                                  ;93800C;
     STA.B DP_Temp12                                                      ;93800D;
     LDA.W SamusProjectile_Types,X                                        ;93800F;
@@ -226,7 +226,7 @@ Initialize_ShinesparkEcho_or_SpazerSBATrailProjectile:
     PLB                                                                  ;938166;
     REP #$30                                                             ;938167;
     LDA.W SamusProjectile_Directions,X                                   ;938169;
-    AND.W #$000F                                                         ;93816C;
+    AND.W #DIR_BITMASK                                                   ;93816C;
     ASL                                                                  ;93816F;
     STA.B DP_Temp12                                                      ;938170;
     LDA.W SamusProjectile_Types,X                                        ;938172;

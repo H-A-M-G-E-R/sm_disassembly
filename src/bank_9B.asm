@@ -598,7 +598,7 @@ SetProjectileTrailPosition:
     ASL                                                                  ;9BA40E;
     TAY                                                                  ;9BA40F;
     LDA.W SamusProjectile_Directions,X                                   ;9BA410;
-    AND.W #$000F                                                         ;9BA413;
+    AND.W #DIR_BITMASK                                                   ;9BA413;
     ASL                                                                  ;9BA416;
     CLC                                                                  ;9BA417;
     ADC.W BeamTrailOffsets_uncharged,Y                                   ;9BA418;
@@ -609,7 +609,7 @@ SetProjectileTrailPosition:
     ASL                                                                  ;9BA420;
     TAY                                                                  ;9BA421;
     LDA.W SamusProjectile_Directions,X                                   ;9BA422;
-    AND.W #$000F                                                         ;9BA425;
+    AND.W #DIR_BITMASK                                                   ;9BA425;
     ASL                                                                  ;9BA428;
     CLC                                                                  ;9BA429;
     ADC.W BeamTrailOffsets_charged,Y                                     ;9BA42A;
@@ -620,7 +620,7 @@ SetProjectileTrailPosition:
     ASL                                                                  ;9BA432;
     TAY                                                                  ;9BA433;
     LDA.W SamusProjectile_Directions,X                                   ;9BA434;
-    AND.W #$000F                                                         ;9BA437;
+    AND.W #DIR_BITMASK                                                   ;9BA437;
     ASL                                                                  ;9BA43A;
     CLC                                                                  ;9BA43B;
     ADC.W BeamTrailOffsets_spazerSBA,Y                                   ;9BA43C;

@@ -10255,7 +10255,7 @@ EnemyShot_Bull:
     ASL                                                                  ;A8DB44;
     TAY                                                                  ;A8DB45;
     LDA.W SamusProjectile_Directions,Y                                   ;A8DB46;
-    AND.W #$000F                                                         ;A8DB49;
+    AND.W #DIR_BITMASK                                                   ;A8DB49;
     ASL                                                                  ;A8DB4C;
     TAY                                                                  ;A8DB4D;
     LDA.W BullConstants_AngleToMove_upFacingRight,Y                      ;A8DB4E;
@@ -11573,7 +11573,7 @@ EnemyShot_Spark:
     ASL                                                                  ;A8E712;
     TAX                                                                  ;A8E713;
     LDA.W SamusProjectile_Directions,X                                   ;A8E714;
-    AND.W #$FFEF                                                         ;A8E717;
+    AND.W #~PROJ_PROP_DELETE                                             ;A8E717;
     STA.W SamusProjectile_Directions,X                                   ;A8E71A;
     PLX                                                                  ;A8E71D;
     RTL                                                                  ;A8E71E;
@@ -11808,7 +11808,7 @@ EnemyShot_FaceBlock:
     ASL                                                                  ;A8E920;
     TAX                                                                  ;A8E921;
     LDA.W SamusProjectile_Directions,X                                   ;A8E922;
-    AND.W #$FFEF                                                         ;A8E925;
+    AND.W #~PROJ_PROP_DELETE                                             ;A8E925;
     STA.W SamusProjectile_Directions,X                                   ;A8E928;
     RTL                                                                  ;A8E92B;
 

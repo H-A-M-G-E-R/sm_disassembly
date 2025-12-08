@@ -7970,7 +7970,7 @@ ShotReaction_GoldenTorizo_Damaged:
 ;;; $D6D1: Golden Torizo shot reaction - normal - missile ;;;
 ShotReaction_GoldenTorizo_Normal_Missile:
     LDA.W SamusProjectile_Directions,Y                                   ;AAD6D1;
-    AND.W #$FFEF                                                         ;AAD6D4;
+    AND.W #~PROJ_PROP_DELETE                                             ;AAD6D4;
     STA.W SamusProjectile_Directions,Y                                   ;AAD6D7;
     LDA.W #RTS_AAC6AB                                                    ;AAD6DA;
     STA.W Torizo.function,X                                              ;AAD6DD;
@@ -8001,7 +8001,7 @@ ShotReaction_GoldenTorizo_Normal_SuperMissile:
     LDA.W #RTS_AAC6AB                                                    ;AAD708;
     STA.W Torizo.function,X                                              ;AAD70B;
     LDA.W SamusProjectile_Directions,Y                                   ;AAD70E;
-    ORA.W #$0010                                                         ;AAD711;
+    ORA.W #PROJ_PROP_DELETE                                              ;AAD711;
     STA.W SamusProjectile_Directions,Y                                   ;AAD714;
     LDA.W #$0001                                                         ;AAD717;
     STA.W Enemy.instTimer,X                                              ;AAD71A;

@@ -7084,7 +7084,7 @@ Kill_Projectile:
   .beam:
     TXY                                                                  ;90AE20;
     LDA.W SamusProjectile_Directions,X                                   ;90AE21;
-    AND.W #$000F                                                         ;90AE24;
+    AND.W #DIR_BITMASK                                                   ;90AE24;
     ASL                                                                  ;90AE27;
     TAX                                                                  ;90AE28;
     JSR.W (.pointers,X)                                                  ;90AE29;
@@ -7243,7 +7243,7 @@ Handle_Projectiles:
 ;;; $AEF3: Projectile pre-instruction - beam - no wave beam ;;;
 ProjectilePreInstruction_Beam_NoWaveBeam:
     LDA.W SamusProjectile_Directions,X                                   ;90AEF3;
-    AND.W #$00F0                                                         ;90AEF6;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90AEF6;
     BEQ .trail                                                           ;90AEF9;
     JSL.L Clear_Projectile                                               ;90AEFB;
     RTS                                                                  ;90AEFF;
@@ -7257,7 +7257,7 @@ ProjectilePreInstruction_Beam_NoWaveBeam:
     LDX.W ProjectileIndex                                                ;90AF0F;
 
 +   LDA.W SamusProjectile_Directions,X                                   ;90AF12;
-    AND.W #$000F                                                         ;90AF15;
+    AND.W #DIR_BITMASK                                                   ;90AF15;
     ASL                                                                  ;90AF18;
     TAY                                                                  ;90AF19;
     LDA.W SamusProjectile_XVelocities,X                                  ;90AF1A;
@@ -7316,7 +7316,7 @@ ProjectilePreInstruction_Missile:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90AF68;
-    AND.W #$00F0                                                         ;90AF6B;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90AF6B;
     BEQ .notDeleted                                                      ;90AF6E;
     JSL.L Clear_Projectile                                               ;90AF70;
     RTS                                                                  ;90AF74;
@@ -7330,7 +7330,7 @@ ProjectilePreInstruction_Missile:
     LDX.W ProjectileIndex                                                ;90AF84;
 
 +   LDA.W SamusProjectile_Directions,X                                   ;90AF87;
-    AND.W #$000F                                                         ;90AF8A;
+    AND.W #DIR_BITMASK                                                   ;90AF8A;
     ASL                                                                  ;90AF8D;
     TAY                                                                  ;90AF8E;
     LDA.W SamusProjectile_XVelocities,X                                  ;90AF8F;
@@ -7395,7 +7395,7 @@ ProjectilePreInstruction_SuperMissile:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90AFE5;
-    AND.W #$00F0                                                         ;90AFE8;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90AFE8;
     BEQ .notDeleted                                                      ;90AFEB;
     JSL.L Clear_Projectile                                               ;90AFED;
     BRA .delete                                                          ;90AFF1;
@@ -7409,7 +7409,7 @@ ProjectilePreInstruction_SuperMissile:
     LDX.W ProjectileIndex                                                ;90B002;
 
 +   LDA.W SamusProjectile_Directions,X                                   ;90B005;
-    AND.W #$000F                                                         ;90B008;
+    AND.W #DIR_BITMASK                                                   ;90B008;
     TAY                                                                  ;90B00B;
     JSR.W AccelerateMissile                                              ;90B00C;
     TYA                                                                  ;90B00F;
@@ -7488,7 +7488,7 @@ ProjectilePreInstruction_SuperMissileLink:
 
 ; If super missile link is flagged for deletion, clear *all* super missile projectiles
     LDA.W SamusProjectile_Directions,X                                   ;90B075;
-    AND.W #$00F0                                                         ;90B078;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90B078;
     BEQ .return                                                          ;90B07B;
     JSL.L Clear_Projectile                                               ;90B07D;
     LDY.W #$0008                                                         ;90B081;
@@ -7515,7 +7515,7 @@ ProjectilePreInstruction_Bomb:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90B099;
-    AND.W #$00F0                                                         ;90B09C;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90B09C;
     BEQ .notDeleted                                                      ;90B09F;
     JSL.L Clear_Projectile                                               ;90B0A1;
     RTS                                                                  ;90B0A5;
@@ -7531,7 +7531,7 @@ ProjectilePreInstruction_PowerBomb:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90B0AE;
-    AND.W #$00F0                                                         ;90B0B1;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90B0B1;
     BEQ .notDeleted                                                      ;90B0B4;
     JSL.L Clear_Projectile                                               ;90B0B6;
     RTS                                                                  ;90B0BA;
@@ -7547,7 +7547,7 @@ ProjectilePreInstruction_Beam_WavePlasmaSpazer_ChargeIceWave:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90B0C3;
-    AND.W #$00F0                                                         ;90B0C6;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90B0C6;
     BEQ .notDeleted                                                      ;90B0C9;
     JSL.L Clear_Projectile                                               ;90B0CB;
     RTS                                                                  ;90B0CF;
@@ -7567,7 +7567,7 @@ ProjectilePreInstruction_Beam_UnchargedIceWave:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90B0E4;
-    AND.W #$00F0                                                         ;90B0E7;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90B0E7;
     BEQ .notDeleted                                                      ;90B0EA;
     JSL.L Clear_Projectile                                               ;90B0EC;
     RTS                                                                  ;90B0F0;
@@ -7584,7 +7584,7 @@ ProjectilePreInstruction_Beam_UnchargedIceWave:
 ;;; $B103: Wave beam shared pre-instruction ;;;
 WaveBeamSharedPreInstruction:
     LDA.W SamusProjectile_Directions,X                                   ;90B103;
-    AND.W #$000F                                                         ;90B106;
+    AND.W #DIR_BITMASK                                                   ;90B106;
     ASL                                                                  ;90B109;
     TAY                                                                  ;90B10A;
     LDA.W SamusProjectile_XVelocities,X                                  ;90B10B;
@@ -7643,7 +7643,7 @@ ProjectilePreInstruction_HyperBeam:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90B159;
-    AND.W #$00F0                                                         ;90B15C;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90B15C;
     BEQ .gotoShared                                                      ;90B15F;
     JSL.L Clear_Projectile                                               ;90B161;
     RTS                                                                  ;90B165;
@@ -7703,7 +7703,7 @@ InitializeBeamVelocities:
     ASL                                                                  ;90B1A6;
     TAY                                                                  ;90B1A7;
     LDA.W SamusProjectile_Directions,X                                   ;90B1A8;
-    AND.W #$000F                                                         ;90B1AB;
+    AND.W #DIR_BITMASK                                                   ;90B1AB;
     ASL                                                                  ;90B1AE;
     TAX                                                                  ;90B1AF;
     JMP.W (.pointers,X)                                                  ;90B1B0;
@@ -7783,7 +7783,7 @@ InitializeProjectileVelocities:
     STZ.W SamusProjectile_XSubPositions,X                                ;90B1F3;
     STZ.W SamusProjectile_YSubPositions,X                                ;90B1F6;
     LDA.W SamusProjectile_Directions,X                                   ;90B1F9;
-    AND.W #$000F                                                         ;90B1FC;
+    AND.W #DIR_BITMASK                                                   ;90B1FC;
     ASL                                                                  ;90B1FF;
     TAX                                                                  ;90B200;
     JMP.W (.pointers,X)                                                  ;90B201;
@@ -8007,7 +8007,7 @@ AccelerateMissile:
 
   .initialized:
     LDA.W SamusProjectile_Directions,X                                   ;90B329;
-    AND.W #$000F                                                         ;90B32C;
+    AND.W #DIR_BITMASK                                                   ;90B32C;
     ASL                                                                  ;90B32F;
     ASL                                                                  ;90B330;
     STA.B DP_Temp12                                                      ;90B331;
@@ -9034,7 +9034,7 @@ InitializeProjectilePositionDirection:
     AND.W #$00FF                                                         ;90BA87;
     STA.B DP_Temp16                                                      ;90BA8A;
     LDA.W SamusProjectile_Directions,Y                                   ;90BA8C;
-    AND.W #$000F                                                         ;90BA8F;
+    AND.W #DIR_BITMASK                                                   ;90BA8F;
     ASL                                                                  ;90BA92;
     TAX                                                                  ;90BA93;
     LDA.W Pose                                                           ;90BA94;
@@ -9442,7 +9442,7 @@ InitialBeamBlockCollision_NoWaveBeam:
 ;;     X: Projectile index
     PHX                                                                  ;90BD64;
     LDA.W SamusProjectile_Directions,X                                   ;90BD65;
-    AND.W #$000F                                                         ;90BD68;
+    AND.W #DIR_BITMASK                                                   ;90BD68;
     ASL                                                                  ;90BD6B;
     TAX                                                                  ;90BD6C;
     JSR.W (.pointers,X)                                                  ;90BD6D;
@@ -9502,7 +9502,7 @@ InitialWaveBeamBlockCollision:
 ;;     X: Projectile index
     PHX                                                                  ;90BDB2;
     LDA.W SamusProjectile_Directions,X                                   ;90BDB3;
-    AND.W #$000F                                                         ;90BDB6;
+    AND.W #DIR_BITMASK                                                   ;90BDB6;
     ASL                                                                  ;90BDB9;
     TAX                                                                  ;90BDBA;
     JSR.W (.pointers,X)                                                  ;90BDBB;
@@ -9840,7 +9840,7 @@ HUDSelectionHandler_MorphBall:
     LDA.W #$0500                                                         ;90BFE2;
     STA.W SamusProjectile_Types,X                                        ;90BFE5;
     PHA                                                                  ;90BFE8;
-    LDA.W #$0000                                                         ;90BFE9;
+    LDA.W #DIR_UP_FACING_RIGHT                                           ;90BFE9;
     STA.W SamusProjectile_Directions,X                                   ;90BFEC;
     LDA.W SamusXPosition                                                 ;90BFEF;
     STA.W SamusProjectile_XPositions,X                                   ;90BFF2;
@@ -9901,7 +9901,7 @@ HUDSelectionHandler_MorphBall:
     ORA.B DP_Temp12                                                      ;90C055;
     STA.W SamusProjectile_Types,X                                        ;90C057;
     PHA                                                                  ;90C05A;
-    LDA.W #$0000                                                         ;90C05B;
+    LDA.W #DIR_UP_FACING_RIGHT                                           ;90C05B;
     STA.W SamusProjectile_Directions,X                                   ;90C05E;
     LDA.W SamusXPosition                                                 ;90C061;
     STA.W SamusProjectile_XPositions,X                                   ;90C064;
@@ -11812,7 +11812,7 @@ FireSpazerSBA:
   .loop:
     LDA.W .initialTrailTimers,X                                          ;90CE17;
     STA.W SamusProjectile_TrailTimers,X                                  ;90CE1A;
-    LDA.W #$0005                                                         ;90CE1D;
+    LDA.W #DIR_DOWN_FACING_LEFT                                          ;90CE1D;
     STA.W SamusProjectile_Directions,X                                   ;90CE20;
     LDA.W #ProjectilePreInstruction_SpazerSBA                            ;90CE23;
     STA.W SamusProjectile_PreInstructions,X                              ;90CE26;
@@ -11924,7 +11924,7 @@ ProjectilePreInstruction_IceSBA_Main:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90CF09;
-    AND.W #$00F0                                                         ;90CF0C;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90CF0C;
     BEQ .trail                                                           ;90CF0F;
     LDA.W #$0024                                                         ;90CF11;
     JSL.L QueueSound_Lib1_Max6                                           ;90CF14;
@@ -11977,7 +11977,7 @@ ProjectilePreInstruction_IceSBA_End:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90CF7A;
-    AND.W #$00F0                                                         ;90CF7D;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90CF7D;
     BEQ .notDeleted                                                      ;90CF80;
     JSL.L Clear_Projectile                                               ;90CF82;
     RTS                                                                  ;90CF86;
@@ -13028,7 +13028,7 @@ ProjectilePreInstruction_PlasmaSBA:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90D793;
-    AND.W #$00F0                                                         ;90D796;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90D796;
     BEQ .notDeleted                                                      ;90D799;
     JSL.L Clear_Projectile                                               ;90D79B;
     RTS                                                                  ;90D79F;
@@ -13214,7 +13214,7 @@ ProjectilePreInstruction_BombSpread:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90D8F7;
-    AND.W #$00F0                                                         ;90D8FA;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90D8FA;
     BEQ .notDeleted                                                      ;90D8FD;
     JSL.L Clear_Projectile                                               ;90D8FF;
     RTS                                                                  ;90D903;
@@ -13349,7 +13349,7 @@ ProjectilePreInstruction_WaveSBA:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90DA08;
-    BIT.W #$00F0                                                         ;90DA0B;
+    BIT.W #PROJ_PROP_DELETE|$00E0                                        ;90DA0B;
     BNE .deleted                                                         ;90DA0E;
     DEC.W SamusProjectile_YVelocities,X                                  ;90DA10;
     BEQ .deleted                                                         ;90DA13;
@@ -13479,7 +13479,7 @@ ProjectilePreInstruction_SpazerSBA:
 ;; Parameters:
 ;;     X: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90DB06;
-    AND.W #$00F0                                                         ;90DB09;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90DB09;
     BEQ .notDeleted                                                      ;90DB0C;
     JSR.W (.clearing,X)                                                  ;90DB0E;
     RTS                                                                  ;90DB11;
@@ -13586,7 +13586,7 @@ SpazerSBA_Phase0_Circling:
     STA.W SamusProjectile_XVelocities,Y                                  ;90DBB1;
     LDA.W .angleDeltas,Y                                                 ;90DBB4;
     STA.W SamusProjectile_YVelocities,Y                                  ;90DBB7;
-    LDA.W #$0000                                                         ;90DBBA;
+    LDA.W #DIR_UP_FACING_RIGHT                                           ;90DBBA;
     STA.W SamusProjectile_Directions,Y                                   ;90DBBD;
     LDA.W #$0002                                                         ;90DBC0;
     STA.W SamusProjectile_Phases,Y                                       ;90DBC3;
@@ -13688,7 +13688,7 @@ FireEndOfSpazerSBA:
     CLC                                                                  ;90DC6A;
     ADC.W .data,Y                                                        ;90DC6B;
     STA.W SamusProjectile_XPositions,Y                                   ;90DC6E;
-    LDA.W #$0005                                                         ;90DC71;
+    LDA.W #DIR_DOWN_FACING_LEFT                                          ;90DC71;
     STA.W SamusProjectile_Directions,Y                                   ;90DC74;
     LDA.W #$0004                                                         ;90DC77;
     STA.W SamusProjectile_TrailTimers,Y                                  ;90DC7A;
@@ -13713,7 +13713,7 @@ ProjectilePreInstruction_EndOfSpazerSBA:
 ;; Parameters:
 ;;     Y: Projectile index
     LDA.W SamusProjectile_Directions,X                                   ;90DC9C;
-    AND.W #$00F0                                                         ;90DC9F;
+    AND.W #PROJ_PROP_DELETE|$00E0                                        ;90DC9F;
     BEQ .notDeleted                                                      ;90DCA2;
     JSL.L Clear_Projectile                                               ;90DCA4;
     RTS                                                                  ;90DCA8;

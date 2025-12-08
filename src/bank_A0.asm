@@ -2921,7 +2921,7 @@ Samus_Projectiles_Interaction_Handling:
 
   .interactive:
     LDA.W SamusProjectile_Directions,Y                                   ;A097E2;
-    AND.W #$0010                                                         ;A097E5;
+    AND.W #PROJ_PROP_DELETE                                              ;A097E5;
     BNE .gotoNext                                                        ;A097E8;
     LDA.W SamusProjectile_XPositions,Y                                   ;A097EA;
     SEC                                                                  ;A097ED;
@@ -2982,7 +2982,7 @@ Samus_Projectiles_Interaction_Handling:
 
   .notABomb:
     LDA.W SamusProjectile_Directions,Y                                   ;A09850;
-    ORA.W #$0010                                                         ;A09853;
+    ORA.W #PROJ_PROP_DELETE                                              ;A09853;
     STA.W SamusProjectile_Directions,Y                                   ;A09856;
     LDA.W SamusProjectile_Damages,Y                                      ;A09859;
     JSL.L Suit_Damage_Division                                           ;A0985C;
@@ -3228,7 +3228,7 @@ HandleEnemyProjectileCollisionWithProjectile:
     BIT.W #$0008                                                         ;A099FC;
     BNE .plasmaBeam                                                      ;A099FF;
     LDA.W SamusProjectile_Directions,Y                                   ;A09A01;
-    ORA.W #$0010                                                         ;A09A04;
+    ORA.W #PROJ_PROP_DELETE                                              ;A09A04;
     STA.W SamusProjectile_Directions,Y                                   ;A09A07;
 
   .plasmaBeam:
@@ -3578,7 +3578,7 @@ Enemy_vs_Projectile_CollisionHandling_ExtendedSpritemap:
 
   .delete:
     LDA.W SamusProjectile_Directions,Y                                   ;A09CD0;
-    ORA.W #$0010                                                         ;A09CD3;
+    ORA.W #PROJ_PROP_DELETE                                              ;A09CD3;
     STA.W SamusProjectile_Directions,Y                                   ;A09CD6;
 
   .noDelete:
@@ -3766,7 +3766,7 @@ Enemy_vs_Bomb_CollisionHandling_ExtendedSpritemap:
     CMP.W EnemyTopBoundaryForEnemyVsProjectileCollisions                 ;A09E3C;
     BPL .nextHitbox                                                      ;A09E3F;
     LDA.W SamusProjectile_Directions,Y                                   ;A09E41;
-    ORA.W #$0010                                                         ;A09E44;
+    ORA.W #PROJ_PROP_DELETE                                              ;A09E44;
     STA.W SamusProjectile_Directions,Y                                   ;A09E47;
     JSL.L .executeCollision                                              ;A09E4A;
     BRA .returnLower                                                     ;A09E4E;
@@ -4305,7 +4305,7 @@ Enemy_vs_ProjectileCollisionHandling:
 
   .delete:
     LDA.W SamusProjectile_Directions,Y                                   ;A0A207;
-    ORA.W #$0010                                                         ;A0A20A;
+    ORA.W #PROJ_PROP_DELETE                                              ;A0A20A;
     STA.W SamusProjectile_Directions,Y                                   ;A0A20D;
 
   .noDelete:
@@ -4421,7 +4421,7 @@ Enemy_vs_Bomb_CollisionHandling:
     LDA.W SamusProjectile_Variables,Y                                    ;A0A2D2;
     BNE .next                                                            ;A0A2D5;
     LDA.W SamusProjectile_Directions,Y                                   ;A0A2D7;
-    ORA.W #$0010                                                         ;A0A2DA;
+    ORA.W #PROJ_PROP_DELETE                                              ;A0A2DA;
     STA.W SamusProjectile_Directions,Y                                   ;A0A2DD;
     JSL.L .executeEnemyShot                                              ;A0A2E0;
     BRA .returnLower                                                     ;A0A2E4;
@@ -5114,7 +5114,7 @@ NormalEnemyShotAI_NoDeathCheck_NoEnemyShotGraphic:
     ASL                                                                  ;A0A7AB;
     TAX                                                                  ;A0A7AC;
     LDA.W SamusProjectile_Directions,X                                   ;A0A7AD;
-    ORA.W #$0010                                                         ;A0A7B0;
+    ORA.W #PROJ_PROP_DELETE                                              ;A0A7B0;
     STA.W SamusProjectile_Directions,X                                   ;A0A7B3;
     LDA.W SamusProjectile_XPositions,X                                   ;A0A7B6;
     STA.B DP_Temp12                                                      ;A0A7B9;
@@ -5269,7 +5269,7 @@ CreateADudShot:
     ASL                                                                  ;A0A8E2;
     TAX                                                                  ;A0A8E3;
     LDA.W SamusProjectile_Directions,X                                   ;A0A8E4;
-    ORA.W #$0010                                                         ;A0A8E7;
+    ORA.W #PROJ_PROP_DELETE                                              ;A0A8E7;
     STA.W SamusProjectile_Directions,X                                   ;A0A8EA;
     PLY                                                                  ;A0A8ED;
     PLX                                                                  ;A0A8EE;
